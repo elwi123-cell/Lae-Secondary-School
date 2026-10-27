@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Library and learning resources information for Lae Secondary School students and the school community.">
+    <meta name="keywords" content="Lae Secondary School library, learning resources, reading, research, study skills, Papua New Guinea">
+    <meta name="author" content="Lae Secondary School">
+       <!-- Make the page fit Android phones and tablets -->
+    
+
+    <!-- Browser compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Library & Learning Resources | Lae Secondary School</title>
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="school-logo.png" type="image/x-icon">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a3d62;       /* Deep navy blue */
+            --primary-dark: #072c4a;
+            --secondary: #c0392b;     /* Strong red accent */
+            --accent: #f1c40f;        /* Gold */
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        
+        
+/* Make sizing predictable */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure the website fits the screen */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Make images fit their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make the main content responsive */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Android phones and smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+        .container {
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-placeholder {
+            width: 90px;
+            height: 70px;
+            background: linear-gradient(100deg, var(--primary), var(--primary-light));
+            border-radius: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.0rem;
+            border: 4px solid var(--accent);
+            flex-shrink: 5;
+        }
+
+        .school-identity h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .school-identity .motto {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+        }
+
+        .main-nav > ul > li > a {
+            display: block;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--primary);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+        }
+
+        .main-nav > ul > li > a:hover,
+        .main-nav > ul > li > a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .main-nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .main-nav li:hover > .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--text);
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            padding-left: 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.25), rgba(7, 44, 74, 0.9)), 
+                        url('home-hero.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* ensures safe area for children */
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2; /* so text & buttons are always above the fixed image */
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* ===== QUICK LINKS / FEATURE CARDS ===== */
+        .features {
+            padding: 70px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 15px auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 30px 25px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card .btn-link {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .feature-card .btn-link:hover {
+            color: var(--primary);
+        }
+
+        /* ===== LOGO ===== */  
+        
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .school-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        
+             /* ===== Principal ===== */  
+        
+        .principal-placeholder {
+            width: 85px;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .principal-content {
+            width: 110%;
+            height: 110%;
+            object-fit: contain;
+            display: block;
+        }   
+        
+        
+        /* ===== ANNOUNCEMENTS ===== */
+        .announcements {
+            padding: 70px 0;
+            background-color: #f0f4f8;
+        }
+
+        .announcements-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+            background: linear-gradient(135deg, #ddd, #bbb);
+        }
+
+        .news-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .news-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .news-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .sidebar-notices {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .notice-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .notice-item h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .notice-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .notice-item a {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        
+        /* Center the student photograph */
+.student-image-container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 24px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f2f4f7;
+}
+
+/* Rectangular student photograph */
+.student-field-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Keep the news card professional */
+.news-card {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive image on mobile devices */
+@media (max-width: 600px) {
+    .student-image-container {
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .student-field-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .news-card {
+        padding: 16px;
+    }
+}
+
+        /* ===== PRINCIPAL MESSAGE TEASER ===== */
+        .principal-teaser {
+            padding: 70px 0;
+            background-color: var(--white);
+        }
+
+        .principal-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: center;
+            background: var(--light);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid #e9ecef;
+        }
+
+        .principal-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            border: 5px solid var(--accent);
+            margin: 0 auto;
+        }
+
+        .principal-text h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .principal-text p {
+            color: var(--text);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .principal-text .signature {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        /* Principal message: centered portrait and message */
+        .principal-teaser .principal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 28px;
+        }
+
+        .principal-teaser .principal-placeholder {
+            width: 280px;
+            height: 280px;
+            max-width: 80vw;
+            max-height: 80vw;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            overflow: hidden;
+            margin: 0 auto;
+            flex-shrink: 0;
+            background: #e9eef3;
+        }
+
+        .principal-teaser .principal-placeholder .school-principal {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .principal-teaser .principal-text {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .announcements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principal-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .principal-photo {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--white);
+                padding: 15px;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 14px 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .main-nav .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: #f8f9fa;
+            }
+
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.15rem;
+            }
+
+            .school-identity h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 70px 0 50px;
+            }
+
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo-placeholder {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+        }
+
+
+        /* ===== RESPONSIVE LAYOUT REFINEMENTS ===== */
+
+        .container {
+            width: min(100%, 1200px);
+            max-width: 1200px;
+            padding-left: clamp(14px, 3vw, 28px);
+            padding-right: clamp(14px, 3vw, 28px);
+        }
+        .header-main {
+            width: min(100%, 1500px);
+            margin: 0 auto;
+            padding: 14px clamp(14px, 2vw, 28px);
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+        .logo-area {
+            min-width: 0;
+            flex: 0 1 auto;
+            gap: 14px;
+        }
+        .logo-placeholder {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            flex: 0 0 76px;
+        }
+        .school-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .school-identity {
+            min-width: 0;
+        }
+        .school-identity h1 {
+            font-size: clamp(1.15rem, 2vw, 1.5rem);
+            overflow-wrap: normal;
+        }
+        .main-nav {
+            min-width: 0;
+            max-width: 100%;
+        }
+        .main-nav > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 3px;
+        }
+        .main-nav > ul > li > a {
+            padding: 10px clamp(8px, 1vw, 13px);
+            font-size: clamp(.82rem, .95vw, .95rem);
+            white-space: normal;
+            text-align: center;
+        }
+        .main-nav .dropdown {
+            min-width: 210px;
+            max-width: min(280px, 90vw);
+        }
+        .dropdown a {
+            overflow-wrap: break-word;
+        }
+        .hero h2 {
+            font-size: clamp(1.75rem, 4vw, 2.8rem);
+        }
+        .hero .tagline {
+            font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+        }
+        .announcements-grid {
+            min-width: 0;
+            grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+        }
+        .news-card, .sidebar-notices, .feature-card, .notice-item,
+        .principal-content, .footer-col {
+            min-width: 0;
+        }
+        .principal-teaser .principal-content {
+            width: 100%;
+            height: auto;
+            padding: clamp(22px, 4vw, 40px);
+        }
+        .principal-teaser .principal-placeholder {
+            width: clamp(170px, 24vw, 280px);
+            height: clamp(170px, 24vw, 280px);
+            max-width: 80vw;
+            max-height: 80vw;
+        }
+        .principal-teaser .principal-text p {
+            font-style: normal;
+            line-height: 1.75;
+        }
+        .footer-grid {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+            gap: clamp(24px, 4vw, 40px);
+        }
+        .footer a, .top-bar a {
+            overflow-wrap: anywhere;
+        }
+        @media (max-width: 1100px) {
+            .header-main {
+                justify-content: space-between;
+            }
+            .main-nav {
+                flex: 1 0 100%;
+                width: 100%;
+            }
+            .main-nav > ul {
+                justify-content: center;
+            }
+            .announcements-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .top-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+            .header-main {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .logo-area {
+                flex: 1 1 auto;
+                max-width: calc(100% - 54px);
+            }
+            .logo-placeholder {
+                width: 58px;
+                height: 58px;
+                flex-basis: 58px;
+            }
+            .school-identity h1 {
+                font-size: clamp(1rem, 4vw, 1.25rem);
+            }
+            .school-identity .motto {
+                font-size: .78rem;
+                letter-spacing: .2px;
+            }
+            .nav-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 44px;
+                min-height: 44px;
+                padding: 6px 10px;
+                border: 1px solid #d8e0e8;
+                border-radius: 8px;
+                background: #fff;
+                flex: 0 0 auto;
+            }
+            .main-nav {
+                display: none;
+                position: static;
+                flex: 1 0 100%;
+                width: 100%;
+                max-width: 100%;
+                padding: 8px 0 0;
+                box-shadow: none;
+                background: transparent;
+            }
+            .main-nav.active {
+                display: block;
+            }
+            .main-nav > ul {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 3px;
+                width: 100%;
+            }
+            .main-nav > ul > li {
+                width: 100%;
+            }
+            .main-nav > ul > li > a {
+                width: 100%;
+                text-align: left;
+                padding: 12px 14px;
+                font-size: .96rem;
+                border-radius: 6px;
+            }
+            .main-nav .dropdown {
+                position: static;
+                display: none;
+                width: 100%;
+                min-width: 0;
+                max-width: 100%;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border-radius: 6px;
+                margin: 2px 0 8px;
+                padding-left: 12px;
+                overflow: visible;
+            }
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+            .dropdown a {
+                padding: 10px 14px;
+                white-space: normal;
+            }
+            .hero {
+                padding: 64px 0 52px;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features, .announcements, .principal-teaser {
+                padding: 48px 0;
+            }
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+            }
+            .principal-teaser .principal-content {
+                gap: 22px;
+            }
+            .cta {
+                padding: 46px 0;
+            }
+            .footer {
+                padding: 44px 0 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+            .top-bar {
+                font-size: .78rem;
+            }
+            .top-bar .container > div {
+                max-width: 100%;
+            }
+            .school-identity h1 {
+                font-size: 1rem;
+            }
+            .school-identity .motto {
+                font-size: .72rem;
+            }
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .section-title h2, .cta h2 {
+                font-size: 1.65rem;
+            }
+            .news-content {
+                padding: 20px;
+            }
+            .principal-teaser .principal-content {
+                padding: 20px 16px;
+            }
+            .principal-teaser .principal-placeholder {
+                width: min(220px, 68vw);
+                height: min(220px, 68vw);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+
+
+/* ===== STEM & ROBOTICS SHOWCASE ===== */
+.robotics-section {
+    padding: 76px 0;
+    color: #f4f8fc;
+    background:
+        radial-gradient(ellipse at 75% 45%, rgba(30,105,150,.24), transparent 48%),
+        linear-gradient(135deg, #071827 0%, #0a263b 55%, #06131f 100%);
+    overflow: hidden;
+}
+.robotics-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+}
+.robotics-copy .eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #f1c40f;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+.robotics-copy h2 {
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+}
+.robotics-copy p {
+    max-width: 560px;
+    color: #c2d1df;
+    line-height: 1.85;
+    margin-bottom: 22px;
+}
+.robotics-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 28px;
+}
+.robotics-points span {
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
+    padding: 7px 12px;
+    color: #e7f3fc;
+    font-size: .82rem;
+}
+.robotics-lab {
+    position: relative;
+    min-width: 0;
+    min-height: 370px;
+    border: 1px solid rgba(170,218,245,.2);
+    border-radius: 18px;
+    overflow: hidden;
+    background:
+      linear-gradient(rgba(96,165,205,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96,165,205,.075) 1px, transparent 1px),
+      radial-gradient(ellipse at 50% 65%, #183a50, #071522 72%);
+    background-size: 28px 28px, 28px 28px, auto;
+    box-shadow: 0 22px 55px rgba(0,0,0,.3);
+}
+.robotics-lab::before {
+    content: "STEM LAB  /  ROBOTICS SIMULATION";
+    position: absolute;
+    z-index: 4;
+    top: 16px;
+    left: 18px;
+    color: #a9c9dc;
+    font: 700 .68rem/1.4 Arial, sans-serif;
+    letter-spacing: 1.7px;
+}
+.robotics-lab::after {
+    content: "LIVE MOTION";
+    position: absolute;
+    z-index: 4;
+    right: 18px;
+    top: 16px;
+    color: #8df2bd;
+    font: 700 .65rem/1.4 Arial, sans-serif;
+    letter-spacing: 1px;
+}
+.robotics-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    position: relative;
+    z-index: 2;
+}
+.robot-base { fill: url(#robotMetal); stroke: #d5e6ef; stroke-width: 2; }
+.robot-joint { fill: #263e50; stroke: #d6e7f1; stroke-width: 4; }
+.robot-highlight { fill: none; stroke: #f5c542; stroke-width: 4; stroke-linecap: round; opacity: .9; }
+.robot-arm-1, .robot-arm-2, .robot-wrist, .robot-gripper {
+    transform-box: view-box;
+}
+.robot-arm-1 {
+    transform-origin: 190px 264px;
+    animation: robotShoulder 5s ease-in-out infinite alternate;
+}
+.robot-arm-2 {
+    transform-origin: 190px 155px;
+    animation: robotElbow 5s ease-in-out infinite alternate;
+}
+.robot-wrist {
+    transform-origin: 292px 159px;
+    animation: robotWrist 5s ease-in-out infinite alternate;
+}
+.robot-gripper {
+    transform-origin: 310px 184px;
+    animation: robotGrip 5s ease-in-out infinite alternate;
+}
+@keyframes robotShoulder {
+    0%, 10% { transform: rotate(-12deg); }
+    48%, 72% { transform: rotate(17deg); }
+    100% { transform: rotate(-4deg); }
+}
+@keyframes robotElbow {
+    0%, 10% { transform: rotate(18deg); }
+    48%, 72% { transform: rotate(-27deg); }
+    100% { transform: rotate(8deg); }
+}
+@keyframes robotWrist {
+    0%, 10% { transform: rotate(-12deg); }
+    48%, 72% { transform: rotate(22deg); }
+    100% { transform: rotate(-6deg); }
+}
+@keyframes robotGrip {
+    0%, 20%, 100% { transform: rotate(0deg); }
+    35%, 70% { transform: rotate(-9deg); }
+}
+.robot-status {
+    position: absolute;
+    z-index: 5;
+    bottom: 15px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b9d3e4;
+    font-size: .75rem;
+    letter-spacing: .5px;
+}
+.robot-status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #8df2bd; box-shadow: 0 0 10px #8df2bd;
+}
+.robotics-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 12px;
+    right: 14px;
+}
+.robotics-controls button {
+    border: 1px solid rgba(255,255,255,.35);
+    color: #fff;
+    background: rgba(3,15,25,.8);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: .78rem;
+}
+.robotics-controls button:hover { background: #0a3d62; }
+.robotics-lab.paused .robot-arm-1,
+.robotics-lab.paused .robot-arm-2,
+.robotics-lab.paused .robot-wrist,
+.robotics-lab.paused .robot-gripper {
+    animation-play-state: paused;
+}
+@media (max-width: 800px) {
+    .robotics-section { padding: 54px 0; }
+    .robotics-layout { grid-template-columns: 1fr; }
+    .robotics-lab { min-height: 280px; }
+    .robotics-svg { min-height: 290px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .robot-arm-1, .robot-arm-2, .robot-wrist, .robot-gripper {
+        animation: none !important;
+    }
+}
+
+    
+        /* ===== LIBRARY PAGE ===== */
+        .page-hero { background: linear-gradient(120deg, var(--primary-dark), var(--primary)); color: var(--white); padding: 58px 0 48px; }
+        .page-hero h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+        .page-hero p { max-width: 820px; font-size: 1.05rem; opacity: .95; }
+        .breadcrumbs { font-size: .9rem; margin-bottom: 20px; color: #e6edf3; }
+        .breadcrumbs a { color: var(--white); text-decoration: underline; }
+        .library-page { padding: 56px 0 70px; }
+        .library-intro { max-width: 900px; margin-bottom: 32px; }
+        .library-intro h2, .library-section h2 { color: var(--primary); margin-bottom: 14px; }
+        .library-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 28px 0 40px; }
+        .library-card { background: var(--white); padding: 26px; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 4px solid var(--accent); }
+        .library-card .symbol { font-size: 2rem; margin-bottom: 12px; }
+        .library-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
+        .library-card p { color: var(--text-light); }
+        .library-section { margin-top: 38px; }
+        .library-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
+        .library-step { background: #f0f4f8; padding: 20px; border-radius: var(--radius); }
+        .library-step h3 { color: var(--primary); margin-bottom: 8px; }
+        .notice-panel { margin-top: 34px; padding: 24px; border-left: 5px solid var(--secondary); background: #fff8e1; border-radius: 5px; }
+        .library-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+        @media (max-width: 768px) { .library-grid, .library-steps { grid-template-columns: 1fr; } .page-hero { padding: 42px 0 36px; } }
+
+    </style>
+</head>
+<body>
+
+
+
+    <!-- HEADER -->
+    <header class="header">
+            <div class="header-main">
+                <div class="logo-area">
+                    <div class="logo-placeholder">
+                        <img src="school-logo.png"
+                             alt="Lae Secondary School Logo"
+                             class="school-logo">
+                    </div>
+
+                    <div class="school-identity">
+                        <h1>Lae Secondary School</h1>
+                        <div class="motto">Learning • Leadership • Service</div>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+<li>
+                  <a href="about.html">About Us</a>
+                        <div class="dropdown">
+                            <a href="profile.html">School Profile</a>
+                            <a href="vision-mission.html">Vision & Mission</a>
+                            <a href="leadership.html">Leadership</a>
+                            <a href="policies.html">Policies & Rules</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="academics.html">Academics</a>
+                        <div class="dropdown">
+                            <a href="academics.html">Programs Overview</a>
+                            <a href="departments.html">Subject Departments</a>
+                            <a href="academic-calendar.html">Academic Calendar</a>
+                            <a href="timetable.html">Timetables</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="admissions.html">Admissions</a>
+                        <div class="dropdown">
+                            <a href="admissions.html">How to Apply</a>
+                            <a href="application.html">Application Form</a>
+                            <a href="fees.html">Fees & Charges</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="students.html">Students</a>
+                        <div class="dropdown">
+                            <a href="students.html">Student Life</a>
+                            <a href="student-leadership.html">Student Leadership</a>
+                            <a href="sports.html">Sports & Clubs</a>
+                            <a href="boarding.html">Boarding</a>
+                        </div>
+                    </li>
+                    <li><a href="robotics.html">Robotics</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin/login.html" aria-label="Principal login portal">Principal Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <!-- LIBRARY & LEARNING RESOURCES PAGE -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="index.html">Home</a> / Library & Learning Resources</div>
+    <h2>Library & Learning Resources</h2>
+    <p>Supporting reading, research, independent study and lifelong learning across the Lae Secondary School community.</p>
+  </div>
+</section>
+<main class="library-page">
+  <div class="container">
+    <section class="library-intro">
+      <h2>A Place to Read, Learn and Explore</h2>
+      <p>A school library and its learning resources help students develop literacy, broaden subject knowledge and build the information skills needed for classroom learning and further study. Students should follow the instructions of teachers and library staff and use all learning materials responsibly.</p>
+      <p>This page provides general guidance for students and families. For the library’s current opening hours, borrowing arrangements, available resources and any specific rules, please contact Lae Secondary School administration.</p>
+    </section>
+    <section class="library-grid" aria-label="Library learning areas">
+      <article class="library-card"><div class="symbol" aria-hidden="true">📚</div><h3>Reading & Literacy</h3><p>Build reading confidence through textbooks, reference materials and suitable reading selections. Regular reading supports vocabulary, comprehension and clear communication.</p></article>
+      <article class="library-card"><div class="symbol" aria-hidden="true">🔎</div><h3>Research Skills</h3><p>Learn to identify a question, locate relevant information, compare sources and record references. Use reliable sources and present information in your own words.</p></article>
+      <article class="library-card"><div class="symbol" aria-hidden="true">💻</div><h3>Digital Learning</h3><p>Where school-approved devices and internet access are available, use them for learning activities, subject research and educational resources while following school technology rules.</p></article>
+      <article class="library-card"><div class="symbol" aria-hidden="true">📝</div><h3>Study & Revision</h3><p>Use quiet study time to review class notes, practise key concepts, prepare questions for teachers and organise revision ahead of assessments.</p></article>
+      <article class="library-card"><div class="symbol" aria-hidden="true">🌏</div><h3>Broader Knowledge</h3><p>Explore science, history, literature, culture, technology and current affairs to connect classroom learning with Papua New Guinea and the wider world.</p></article>
+      <article class="library-card"><div class="symbol" aria-hidden="true">🤝</div><h3>Shared Responsibility</h3><p>Help maintain a welcoming learning environment by respecting other readers, caring for books and equipment, and returning shared resources as directed.</p></article>
+    </section>
+    <section class="library-section">
+      <h2>Good Library and Study Habits</h2>
+      <div class="library-steps">
+        <article class="library-step"><h3>1. Be prepared</h3><p>Bring the materials needed for your task and identify what you want to learn before beginning your study session.</p></article>
+        <article class="library-step"><h3>2. Respect the space</h3><p>Keep noise at an appropriate level, follow staff instructions and leave tables and learning areas tidy for the next users.</p></article>
+        <article class="library-step"><h3>3. Care for resources</h3><p>Handle books and equipment carefully. Report damage or technical problems to the responsible staff member rather than attempting repairs yourself.</p></article>
+        <article class="library-step"><h3>4. Use information honestly</h3><p>Acknowledge the sources used in assignments, avoid copying another person’s work and ask a teacher when unsure how to cite information.</p></article>
+      </div>
+    </section>
+    <section class="library-section">
+      <h2>Support for Students and Families</h2>
+      <p>Students who need help finding suitable reading, using research materials or improving study routines can ask a teacher or the relevant school staff member for guidance. Parents and guardians can encourage regular reading at home and help students set aside time for homework and revision.</p>
+      <div class="notice-panel"><strong>Important information</strong><p>The school has not published current library hours, catalogue details or borrowing limits on this page. Please confirm these arrangements directly with the school before making plans.</p></div>
+      <div class="library-actions"><a class="btn btn-primary" href="contact.html">Contact the School</a><a class="btn btn-outline" href="downloads.html">Visit Downloads</a><a class="btn btn-outline" href="academics.html">Explore Academics</a></div>
+    </section>
+  </div>
+</main>
+
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Lae Secondary School</h3>
+                    <p>
+                        A secondary school committed to academic excellence, 
+                        character development and service to the people of Papua New Guinea.
+                    </p>
+                    <p style="margin-top:15px;">
+                        <strong>Motto:</strong> Learning • Leadership • Service
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About the School</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="students.html">Student Life</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="school-fee-purpose.html">Where do school fees go?</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="admin/login.html">Principal Login Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                        <li><a href="fees.html">Fees & Charges</a></li>
+                        <li><a href="policies.html">School Policies</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="parents.html">Parents & Guardians</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📍 Lae Secondary School<br>
+                       PO Box 792, Lae 411<br>
+                       Lae District, Morobe Province, Papua New Guinea</p>
+                    <p>📞 Administration: +675 7828 9085</p>
+                    <p>✉️ <a href="mailto:administration@laesecondary.edu.pg">administration@laesecondary.edu.pg</a></p>
+                    <p>Principal: +675 81302423</p>
+                    <p>✉️ <a href="mailto:csraymond.principal@laesecondary.edu.pg">csraymond.principal@laesecondary.edu.pg</a></p>
+                    <p>General enquiries: <a href="mailto:info.reception@laesecondary.edu.pg">info.reception@laesecondary.edu.pg</a></p>
+                    <p style="margin-top:12px; font-size:0.85rem;">
+                        Office Hours: Monday – Friday<br>
+                        8:00 am – 4:00 pm
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Lae Secondary School. All rights reserved. &nbsp;|&nbsp;
+                    <a href="policies.html">Privacy Policy</a> &nbsp;|&nbsp;
+                    <a href="contact.html">Contact</a>
+                </p>
+                <p style="margin-top:8px; font-size:0.85rem;">
+                    School information portal • Serving students, parents and the Lae community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Simple dropdown support for mobile
+        document.querySelectorAll('.main-nav > ul > li').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && this.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    this.classList.toggle('open');
+                }
+            });
+        });
+
+
+        // Robotics animation controls
+        (function () {
+            const lab = document.getElementById('roboticsLab');
+            const button = document.getElementById('robotPause');
+            const status = document.getElementById('robotStatusText');
+            if (!lab || !button || !status) return;
+
+            button.addEventListener('click', function () {
+                const paused = lab.classList.toggle('paused');
+                button.textContent = paused ? 'Resume motion' : 'Pause motion';
+                button.setAttribute('aria-pressed', String(paused));
+                status.textContent = paused ? 'MOTION PAUSED' : 'ROBOTIC ARM ACTIVE';
+            });
+        })();
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Lae Secondary School CMS: public, published homepage content only -->
+    <script type="module">
+      import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+      const SUPABASE_URL = 'https://dhslaxdmsmbcmgkzyzfl.supabase.co';
+      const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ANnaUkXg5zOrbC3g8zuhsg_3bZEd3Ou';
+      const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+      // Only text content is inserted. HTML from the database is never executed.
+      const setText = (element, value) => {
+        if (element && typeof value === 'string') element.textContent = value;
+      };
+      const setLink = (element, label, href) => {
+        if (!element) return;
+        if (typeof label === 'string') element.textContent = label;
+        if (typeof href === 'string' && href.trim() && !/^\s*javascript:/i.test(href)) element.setAttribute('href', href);
+      };
+      const setImage = (element, value, alt) => {
+        if (!element || typeof value !== 'string' || !value.trim()) return;
+        try {
+          const url = new URL(value, window.location.href);
+          if (url.protocol === 'https:' || url.origin === window.location.origin) {
+            element.src = url.href;
+            if (typeof alt === 'string') element.alt = alt;
+          }
+        } catch (_) { /* Ignore invalid image URLs; keep the original image. */ }
+      };
+
+      function applyHomepageContent(key, content) {
+        if (!content || typeof content !== 'object' || Array.isArray(content)) return;
+        switch (key) {
+          case 'home_hero': {
+            const section = document.querySelector('.hero');
+            if (!section) break;
+            setText(section.querySelector('h2'), content.heading);
+            setText(section.querySelector('.tagline'), content.tagline);
+            setText(section.querySelector('.hero-content > p'), content.text);
+            const buttons = section.querySelectorAll('.hero-buttons a');
+            setLink(buttons[0], content.primary_button_label, content.primary_button_url);
+            setLink(buttons[1], content.secondary_button_label, content.secondary_button_url);
+            break;
+          }
+          case 'home_principal_message': {
+            const section = document.querySelector('.principal-teaser');
+            if (!section) break;
+            setText(section.querySelector('.principal-text h2'), content.heading);
+            setText(section.querySelector('.principal-text p'), content.message);
+            setText(section.querySelector('.principal-text .signature'), content.signature);
+            setLink(section.querySelector('.principal-text a'), content.link_label, content.link_url);
+            setImage(section.querySelector('.principal-placeholder img'), content.image_url, content.image_alt);
+            break;
+          }
+          case 'home_cta': {
+            const section = document.querySelector('.cta');
+            if (!section) break;
+            setText(section.querySelector('h2'), content.heading);
+            setText(section.querySelector('p'), content.text);
+            const buttons = section.querySelectorAll('.hero-buttons a');
+            setLink(buttons[0], content.primary_button_label, content.primary_button_url);
+            setLink(buttons[1], content.secondary_button_label, content.secondary_button_url);
+            break;
+          }
+          case 'home_robotics': {
+            const section = document.querySelector('.robotics-section');
+            if (!section) break;
+            setText(section.querySelector('.robotics-copy .eyebrow'), content.eyebrow);
+            setText(section.querySelector('.robotics-copy h2'), content.heading);
+            const paragraphs = section.querySelectorAll('.robotics-copy > p');
+            if (Array.isArray(content.paragraphs)) {
+              content.paragraphs.slice(0, paragraphs.length).forEach((text, i) => setText(paragraphs[i], text));
+            }
+            setLink(section.querySelector('.robotics-copy > a'), content.link_label, content.link_url);
+            break;
+          }
+          default:
+            // Unknown keys, including cms_connection_test, are safely ignored.
+            break;
+        }
+      }
+
+      async function loadPublishedHomepageContent() {
+        try {
+          const { data, error } = await supabase
+            .from('site_content')
+            .select('section_key, content')
+            .eq('page_slug', 'index.html')
+            .eq('is_published', true);
+          if (error) throw error;
+          (data || []).forEach(row => applyHomepageContent(row.section_key, row.content));
+        } catch (error) {
+          // The existing static homepage remains visible if CMS content cannot load.
+          console.error('Homepage CMS content could not be loaded:', error.message || error);
+        }
+      }
+      loadPublishedHomepageContent();
+    </script>
+
+</body>
+</html>

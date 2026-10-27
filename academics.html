@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic programs and curriculum at Lae Secondary School – Grade 9–12 secondary education pathways in Papua New Guinea.">
+    <meta name="keywords" content="academics, curriculum, secondary school, Grade 9, Grade 10, Grade 11, Grade 12, Papua New Guinea">
+    <meta name="author" content="Lae Secondary School">
+     <!-- Make the page fit Android phones and tablets -->
+    
+
+    <!-- Browser compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Academics | Lae Secondary School</title>
+    
+    <link rel="icon" href="images/school-logo.png" type="image/x-icon">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a3d62;
+            --primary-dark: #072c4a;
+            --secondary: #c0392b;
+            --accent: #f1c40f;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.4rem;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .school-identity h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .school-identity .motto {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+        }
+
+        .main-nav > ul > li > a {
+            display: block;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--primary);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+        }
+
+        .main-nav > ul > li > a:hover,
+        .main-nav > ul > li > a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .main-nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .main-nav li:hover > .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--text);
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            padding-left: 24px;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.9), rgba(7, 44, 74, 0.95)), 
+                        url('images/campus-hero.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 70px 0 50px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .content-area h2 {
+            color: var(--primary);
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .content-area h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin: 35px 0 15px;
+        }
+
+        .content-area p {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+
+        .content-area ul {
+            margin: 12px 0 20px 22px;
+        }
+
+        .content-area li {
+            margin-bottom: 8px;
+        }
+
+        /* Program Cards */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .program-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        .program-card.upper {
+            border-top-color: var(--secondary);
+        }
+
+        .program-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 22px 25px;
+        }
+
+        .program-card.upper .program-header {
+            background: linear-gradient(135deg, var(--secondary), #a93226);
+        }
+
+        .program-header h3 {
+            color: var(--white);
+            margin: 0 0 5px 0;
+            font-size: 1.35rem;
+        }
+
+        .program-header .grades {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .program-body {
+            padding: 25px;
+        }
+
+        .program-body p {
+            font-size: 0.98rem;
+            margin-bottom: 15px;
+        }
+
+        .program-body ul {
+            margin: 0 0 0 18px;
+            font-size: 0.95rem;
+        }
+
+        .program-body li {
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        /* Subject Areas */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
+        }
+
+        .subject-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .subject-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subject-card h4 {
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .subject-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Assessment Box */
+        .assessment-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin: 30px 0;
+            border-left: 6px solid var(--accent);
+        }
+
+        .assessment-box h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        /* Pathway Note */
+        .pathway-note {
+            background: linear-gradient(135deg, rgba(10, 61, 98, 0.06), rgba(7, 44, 74, 0.1));
+            border: 1px solid rgba(10, 61, 98, 0.15);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .pathway-note h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        /* Quick Links Row */
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin: 30px 0;
+        }
+
+        .quick-link-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 22px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .quick-link-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .quick-link-card h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .quick-link-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .quick-link-card a {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .quick-link-card a:hover {
+            color: var(--primary);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .sidebar-card ul {
+            list-style: none;
+        }
+
+        .sidebar-card li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-card a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-card a:hover,
+        .sidebar-card a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-box h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .cta-box p {
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                padding: 15px;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 14px 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .main-nav .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: #f8f9fa;
+            }
+
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .school-identity h1 {
+                font-size: 1.2rem;
+            }
+
+            .btn-outline-light {
+                margin-left: 0;
+                margin-top: 10px;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-placeholder {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            .page-hero {
+                padding: 50px 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo-area">
+                    <div class="logo-placeholder">LSS</div>
+                    <div class="school-identity">
+                        <h1>Lae Secondary School</h1>
+                        <div class="motto">Lae • Morobe • Papua New Guinea</div>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="about.html">About Us</a>
+                            <div class="dropdown">
+                                <a href="about.html">School Profile</a>
+                                <a href="vision-mission.html">Vision & Mission</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="policies.html">Policies & Rules</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="academics.html" class="active">Academics</a>
+                            <div class="dropdown">
+                                <a href="academics.html">Programs Overview</a>
+                                <a href="departments.html">Subject Departments</a>
+                                <a href="academic-calendar.html">Academic Calendar</a>
+                                <a href="timetable.html">Timetables</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="admissions.html">Admissions</a>
+                            <div class="dropdown">
+                                <a href="admissions.html">How to Apply</a>
+                                <a href="application.html">Application Form</a>
+                                <a href="fees.html">Fees & Charges</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="students.html">Students</a>
+                            <div class="dropdown">
+                                <a href="students.html">Student Life</a>
+                                <a href="student-leadership.html">Student Leadership</a>
+                                <a href="sports.html">Sports & Clubs</a>
+                                <a href="boarding.html">Boarding</a>
+                            </div>
+                        </li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Academics & Curriculum</h1>
+            <p>Quality secondary education programs designed to build strong foundations and prepare students for further study, work and life in Papua New Guinea.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp;›&nbsp; Academics
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                
+                <!-- MAIN CONTENT AREA -->
+                <div class="content-area">
+
+                    <h2>Academic Programs Overview</h2>
+                    <p>
+                        Lae Secondary School offers a structured secondary curriculum aligned with the requirements of the National Department of Education. 
+                        Our programs aim to develop knowledge, skills, values and attitudes that prepare students for higher education, 
+                        vocational pathways and responsible citizenship.
+                    </p>
+
+                    <!-- Program Cards -->
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <div class="program-header">
+                                <h3>Lower Secondary</h3>
+                                <div class="grades">Grade 9 & Grade 10</div>
+                            </div>
+                            <div class="program-body">
+                                <p>
+                                    The lower secondary program builds on primary education and provides a broad foundation across key learning areas.
+                                </p>
+                                <ul>
+                                    <li>Core subjects including English, Mathematics, Science and Social Science</li>
+                                    <li>Practical and personal development subjects</li>
+                                    <li>Preparation for Grade 10 Certificate examinations</li>
+                                    <li>Focus on literacy, numeracy and study skills</li>
+                                    <li>Character formation and values education</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="program-card upper">
+                            <div class="program-header">
+                                <h3>Upper Secondary</h3>
+                                <div class="grades">Grade 11 & Grade 12</div>
+                            </div>
+                            <div class="program-body">
+                                <p>
+                                    The upper secondary program deepens learning and prepares students for tertiary study, training or employment.
+                                </p>
+                                <ul>
+                                    <li>Specialised subject choices according to pathways</li>
+                                    <li>Preparation for Grade 12 Certificate examinations</li>
+                                    <li>Development of independent study and research skills</li>
+                                    <li>Career guidance and further education awareness</li>
+                                    <li>Leadership and service opportunities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pathway-note">
+                        <h4>Note on School Structure</h4>
+                        <p style="margin-bottom:0;">
+                            For the current approved grade offerings, subject availability and examination arrangements at Lae Secondary School, please contact the school administration. Information should be confirmed by the school before publication.
+                        </p>
+                    </div>
+
+                    <h3>Key Learning Areas</h3>
+                    <p>
+                        Students engage with a balanced curriculum that covers academic, practical and personal development areas. 
+                        Detailed subject information is available on the Departments page.
+                    </p>
+
+                    <div class="subjects-grid">
+                        <div class="subject-card">
+                            <div class="icon">📖</div>
+                            <h4>English</h4>
+                            <p>Language, literature & communication</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">🔢</div>
+                            <h4>Mathematics</h4>
+                            <p>Numeracy, problem-solving & reasoning</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">🔬</div>
+                            <h4>Science</h4>
+                            <p>Biology, Chemistry, Physics & inquiry</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">🌍</div>
+                            <h4>Social Science</h4>
+                            <p>History, Geography, Civics & society</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">💼</div>
+                            <h4>Business Studies</h4>
+                            <p>Commerce, accounting & enterprise</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">🛠️</div>
+                            <h4>Practical Subjects</h4>
+                            <p>Agriculture, Home Ec, ICT & skills</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">🏃</div>
+                            <h4>Personal Development</h4>
+                            <p>Health, PE & life skills</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="icon">✝️</div>
+                            <h4>Values Education</h4>
+                            <p>Character, ethics & faith formation</p>
+                        </div>
+                    </div>
+
+                    <h3>Assessment & Examinations</h3>
+                    <div class="assessment-box">
+                        <h3>How Student Progress Is Measured</h3>
+                        <p>
+                            Assessment is continuous and includes classwork, assignments, tests, practical work and formal examinations. 
+                            The school follows assessment policies approved by the National Department of Education and relevant examining bodies.
+                        </p>
+                        <ul>
+                            <li><strong>Formative assessment</strong> – ongoing feedback to support learning</li>
+                            <li><strong>Summative assessment</strong> – term tests, internal examinations and final grading</li>
+                            <li><strong>National examinations</strong> – Grade 10 and Grade 12 Certificate examinations as applicable</li>
+                            <li><strong>Reporting</strong> – progress reports issued to parents/guardians at designated times</li>
+                        </ul>
+                        <p style="margin-bottom:0; margin-top:15px;">
+                            Official examination information and results guidance (where publicly available) can be found on the 
+                            <a href="results.html" style="color: var(--secondary); font-weight: 600;">Results</a> page. 
+                            Confidential student results are only released through authorised channels.
+                        </p>
+                    </div>
+
+                    <h3>Academic Support & Resources</h3>
+                    <p>
+                        The school aims to support every student’s learning through structured teaching, remedial opportunities where available, 
+                        guidance services and access to learning resources such as the library and study materials.
+                    </p>
+
+                    <div class="quick-links">
+                        <div class="quick-link-card">
+                            <h4>Subject Departments</h4>
+                            <p>Detailed information about each learning area and teaching teams.</p>
+                            <a href="departments.html">View Departments →</a>
+                        </div>
+                        <div class="quick-link-card">
+                            <h4>Academic Calendar</h4>
+                            <p>Term dates, examination periods and key academic events.</p>
+                            <a href="academic-calendar.html">View Calendar →</a>
+                        </div>
+                        <div class="quick-link-card">
+                            <h4>Timetables</h4>
+                            <p>Class schedules and examination timetables (when published).</p>
+                            <a href="timetable.html">View Timetables →</a>
+                        </div>
+                        <div class="quick-link-card">
+                            <h4>Downloads</h4>
+                            <p>Prospectus, forms, policies and study-related documents.</p>
+                            <a href="downloads.html">Go to Downloads →</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA Box -->
+                    <div class="cta-box">
+                        <h3>Interested in Joining Our Academic Community?</h3>
+                        <p>Learn about admissions requirements, fees and how to apply for a place at Lae Secondary School.</p>
+                        <a href="admissions.html" class="btn btn-primary">Admissions Information</a>
+                        <a href="contact.html" class="btn btn-outline-light">Contact the School</a>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Academics</h3>
+                        <ul>
+                            <li><a href="academics.html" class="active">Programs Overview</a></li>
+                            <li><a href="departments.html">Subject Departments</a></li>
+                            <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                            <li><a href="timetable.html">Timetables</a></li>
+                            <li><a href="results.html">Results Information</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="admissions.html">Admissions</a></li>
+                            <li><a href="fees.html">Fees & Charges</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                            <li><a href="students.html">Student Life</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Need Help?</h3>
+                        <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 12px;">
+                            For questions about subjects, pathways or assessment, please contact the school office or the relevant Head of Department.
+                        </p>
+                        <a href="contact.html" style="color: var(--secondary); font-weight: 600;">Contact Office →</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Lae Secondary School</h3>
+                    <p>
+                        A secondary school committed to academic excellence, 
+                        character development and service to the people of Papua New Guinea.
+                    </p>
+                    <p style="margin-top:15px;">
+                        <strong>Location:</strong> Lae District, Morobe Province, Papua New Guinea
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About the School</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="students.html">Student Life</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                        <li><a href="fees.html">Fees & Charges</a></li>
+                        <li><a href="policies.html">School Policies</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="parents.html">Parents & Guardians</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📍 PO Box 792, Lae 411<br>
+                       Lae District, Morobe Province<br>
+                       Papua New Guinea</p>
+                    <p>📞 <a href="tel:+67578289085">+675 7828 9085</a></p>
+                    <p>✉️ <a href="mailto:administration@laesecondary.edu.pg">administration@laesecondary.edu.pg</a></p>
+                    <p><strong>Principal:</strong> Mr Christopher Raymond</p>
+                    <p>📞 <a href="tel:+67581302423">+675 8130 2423</a></p>
+                    <p>✉️ <a href="mailto:csraymond.principal@laesecondary.edu.pg">csraymond.principal@laesecondary.edu.pg</a></p>
+                    <p style="margin-top:12px; font-size:0.85rem;">
+                        Office Hours: Monday – Friday<br>
+                        8:00 am – 4:00 pm
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Lae Secondary School. All rights reserved. &nbsp;|&nbsp;
+                    <a href="policies.html">Privacy Policy</a> &nbsp;|&nbsp;
+                    <a href="contact.html">Contact</a>
+                </p>
+                <p style="margin-top:8px; font-size:0.85rem;">
+                    Official school website • Serving students, parents and the community of Papua New Guinea
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.main-nav > ul > li').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && this.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    this.classList.toggle('open');
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

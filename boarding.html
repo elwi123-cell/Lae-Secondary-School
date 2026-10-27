@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boarding – Lae Secondary School. Information about boarding facilities, daily routine, rules and student welfare for secondary students in Papua New Guinea.">
+    <meta name="keywords" content="boarding, dormitory, secondary school, Papua New Guinea, student accommodation, boarding life">
+    <meta name="author" content="Lae Secondary School">
+     <!-- Make the page fit Android phones and tablets -->
+    
+
+    <!-- Browser compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Boarding | Lae Secondary School</title>
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="images/school-logo.png" type="image/x-icon">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a3d62;
+            --primary-dark: #072c4a;
+            --secondary: #c0392b;
+            --accent: #f1c40f;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.4rem;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .school-identity h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .school-identity .motto {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+        }
+
+        .main-nav > ul > li > a {
+            display: block;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--primary);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+        }
+
+        .main-nav > ul > li > a:hover,
+        .main-nav > ul > li > a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .main-nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .main-nav li:hover > .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--text);
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            padding-left: 24px;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.9), rgba(7, 44, 74, 0.95)), 
+                        url('images/campus-hero.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 70px 0 50px;
+            text-align: center;
+        }
+
+        .page-hero h2 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 15px auto 0;
+        }
+
+        /* ===== INTRO BOX ===== */
+        .intro-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px 35px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--secondary);
+            margin-bottom: 50px;
+        }
+
+        .intro-box p {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid #e9ecef;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* ===== DAILY ROUTINE ===== */
+        .routine-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 45px;
+        }
+
+        .routine-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .routine-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .routine-table th,
+        .routine-table td {
+            padding: 13px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+
+        .routine-table th {
+            background: #f0f4f8;
+            color: var(--primary);
+            font-weight: 600;
+            width: 30%;
+        }
+
+        .routine-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .routine-table tr:hover td {
+            background: #fafbfc;
+        }
+
+        /* ===== BENEFITS & RULES ===== */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .info-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 26px;
+            height: 100%;
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            font-size: 0.95rem;
+            color: var(--text);
+            padding: 7px 0;
+            padding-left: 22px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-box li:last-child {
+            border-bottom: none;
+        }
+
+        .info-box li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .info-box.rules li::before {
+            content: '•';
+            color: var(--primary);
+        }
+
+        /* ===== WELFARE ===== */
+        .welfare-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: var(--radius);
+            padding: 35px 40px;
+            margin-bottom: 45px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .welfare-icon {
+            font-size: 3.5rem;
+            opacity: 0.9;
+        }
+
+        .welfare-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .welfare-content p {
+            opacity: 0.95;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* ===== NOTE BOX ===== */
+        .note-box {
+            background: #fff8e6;
+            border: 1px solid #f1c40f;
+            border-radius: var(--radius);
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .note-box .icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .note-box p {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .note-box.red {
+            background: #fde8e8;
+            border-color: #e74c3c;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 13px 26px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 55px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 1.9rem;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .welfare-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                padding: 15px;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 14px 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .main-nav .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: #f8f9fa;
+            }
+
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .page-hero h2 {
+                font-size: 1.9rem;
+            }
+
+            .school-identity h1 {
+                font-size: 1.2rem;
+            }
+
+            .routine-table th,
+            .routine-table td {
+                padding: 12px 14px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero {
+                padding: 55px 0 40px;
+            }
+
+            .page-hero h2 {
+                font-size: 1.6rem;
+            }
+
+            .logo-placeholder {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            .routine-table, .routine-table thead, .routine-table tbody, 
+            .routine-table th, .routine-table td, .routine-table tr {
+                display: block;
+            }
+
+            .routine-table th {
+                width: 100%;
+                background: var(--primary);
+                color: var(--white);
+            }
+
+            .routine-table td {
+                border-bottom: none;
+                padding-top: 6px;
+                padding-bottom: 14px;
+            }
+
+            .routine-table tr {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo-area">
+                    <div class="logo-placeholder" aria-label="Lae Secondary School">LSS</div>
+                    <div class="school-identity">
+                        <h1>Lae Secondary School</h1>
+                        <div class="motto">Excellence • Discipline • Service</div>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="about.html">About Us</a>
+                            <div class="dropdown">
+                                <a href="about.html">School Profile</a>
+                                <a href="vision-mission.html">Vision & Mission</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="policies.html">Policies & Rules</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="academics.html">Academics</a>
+                            <div class="dropdown">
+                                <a href="academics.html">Programs Overview</a>
+                                <a href="departments.html">Subject Departments</a>
+                                <a href="academic-calendar.html">Academic Calendar</a>
+                                <a href="timetable.html">Timetables</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="admissions.html">Admissions</a>
+                            <div class="dropdown">
+                                <a href="admissions.html">How to Apply</a>
+                                <a href="application.html">Application Form</a>
+                                <a href="fees.html">Fees & Charges</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="students.html" class="active">Students</a>
+                            <div class="dropdown">
+                                <a href="students.html">Student Life</a>
+                                <a href="student-leadership.html">Student Leadership</a>
+                                <a href="sports.html">Sports & Clubs</a>
+                                <a href="boarding.html">Boarding</a>
+                            </div>
+                        </li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h2>Boarding</h2>
+            <p>Information for families enquiring about student accommodation and boarding arrangements.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp;›&nbsp; 
+                <a href="students.html">Students</a> &nbsp;›&nbsp; 
+                Boarding
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="section">
+        <div class="container">
+
+            <div class="intro-box">
+                <p>
+                    Families seeking information about boarding or accommodation for Lae Secondary School students should contact the school administration directly. Current boarding availability, facilities, supervision arrangements and eligibility requirements must be confirmed by the school before any application or travel plans are made.
+                </p>
+                <p>
+                    <strong>Important:</strong> This page does not confirm that Lae Secondary School operates boarding facilities. Please contact the administration office to verify whether boarding is available and to obtain current, official information.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div class="section-title">
+                <h2>Boarding Life at a Glance</h2>
+                <p>General topics to discuss with the school if boarding support is being considered.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛏️</div>
+                    <h3>Accommodation</h3>
+                    <p>Ask the school administration whether residential accommodation is available and what arrangements apply.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <h3>Meals</h3>
+                    <p>Confirm whether meals are provided and ask for current details directly from the school.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Supervised Study</h3>
+                    <p>Ask whether supervised study sessions are part of any available accommodation arrangement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Supervision</h3>
+                    <p>Confirm the supervision and student-care arrangements with the school before applying.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Welfare & Safety</h3>
+                    <p>Ask the school about student welfare, safeguarding and safety procedures for any accommodation offered.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Discuss expectations, support arrangements and student responsibilities with school staff.</p>
+                </div>
+            </div>
+
+            <!-- Typical Daily Routine -->
+            <div class="section-title">
+                <h2>Typical Daily Routine</h2>
+                <p>The times and arrangements below are illustrative only, not a verified Lae Secondary School schedule.</p>
+            </div>
+
+            <div class="routine-box">
+                <div class="routine-header">
+                    Example of Routine Topics to Confirm
+                </div>
+                <table class="routine-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Early morning</td>
+                            <td>Wake-up, personal hygiene, room tidy-up</td>
+                        </tr>
+                        <tr>
+                            <td>Morning</td>
+                            <td>Breakfast, preparation for school, morning assembly / classes</td>
+                        </tr>
+                        <tr>
+                            <td>School day</td>
+                            <td>Follow the normal school timetable (lessons, breaks, sports)</td>
+                        </tr>
+                        <tr>
+                            <td>Afternoon</td>
+                            <td>End of classes, free time / sports / clubs, personal time</td>
+                        </tr>
+                        <tr>
+                            <td>Evening</td>
+                            <td>Dinner, supervised study / prep, recreation</td>
+                        </tr>
+                        <tr>
+                            <td>Night</td>
+                            <td>Lights out / quiet time, rest</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Benefits & Rules -->
+            <div class="two-col">
+                <div class="info-box">
+                    <h3>🌟 Benefits of Boarding</h3>
+                    <ul>
+                        <li>Stable daily routine that supports learning</li>
+                        <li>Access to supervised evening study</li>
+                        <li>Development of independence and self-discipline</li>
+                        <li>Close friendships and strong school community</li>
+                        <li>Pastoral care and adult supervision</li>
+                        <li>Opportunity to fully participate in school life</li>
+                    </ul>
+                </div>
+
+                <div class="info-box rules">
+                    <h3>📋 Boarding Expectations</h3>
+                    <ul>
+                        <li>Respect dormitory rules and staff instructions</li>
+                        <li>Keep personal and shared spaces clean and tidy</li>
+                        <li>Observe lights-out and quiet times</li>
+                        <li>Show courtesy to other boarders and staff</li>
+                        <li>Attend all required meals and study sessions</li>
+                        <li>Leave and return only with proper permission</li>
+                        <li>Uphold the school’s values at all times</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Welfare -->
+            <div class="welfare-box">
+                <div class="welfare-icon">🛡️</div>
+                <div class="welfare-content">
+                    <h3>Student Welfare & Care</h3>
+                    <p>
+                        Parents and guardians should ask the school administration about the student welfare, safeguarding, supervision and communication arrangements that apply if boarding or accommodation is available. Any concerns should be raised directly with the school leadership.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="note-box">
+                <div class="icon">ℹ️</div>
+                <p>
+                    <strong>Important:</strong> Boarding facilities, availability, meal provisions, daily routines, fees and rules have not been confirmed by the information supplied for this website. Please contact the school administration for current official details.
+                </p>
+            </div>
+
+            <div class="note-box red">
+                <div class="icon">⚠️</div>
+                <p>
+                    <strong>Before making plans:</strong> Do not assume that boarding places or facilities are available. Contact the school for confirmation of availability, eligibility, fees and application requirements before making arrangements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+        <div class="container">
+            <h2>Interested in Boarding?</h2>
+            <p>
+                Contact Lae Secondary School administration to confirm whether boarding is available and, if so, to request official details on eligibility, fees and application procedures.
+            </p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact the School</a>
+                <a href="admissions.html" class="btn btn-outline">Admissions Information</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Lae Secondary School</h3>
+                    <p>
+                        A secondary school committed to academic excellence, 
+                        character development and service to the people of Papua New Guinea.
+                    </p>
+                    <p style="margin-top:15px;">
+                        <strong>Postal address:</strong> PO Box 792, Lae 411, Morobe Province, Papua New Guinea
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About the School</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="students.html">Student Life</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                        <li><a href="fees.html">Fees & Charges</a></li>
+                        <li><a href="policies.html">School Policies</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="parents.html">Parents & Guardians</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📍 PO Box 792, Lae 411<br>
+                       Lae District, Morobe Province<br>
+                       Papua New Guinea</p>
+                    <p>📞  +675 7828 9085</p>
+                    <p>✉️ administration@laesecondary.edu.pg</p>
+                    <p style="margin-top:12px; font-size:0.85rem;">
+                        Office Hours: Monday – Friday<br>
+                        8:00 am – 4:00 pm
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Lae Secondary School. All rights reserved. &nbsp;|&nbsp;
+                    <a href="policies.html">Privacy Policy</a> &nbsp;|&nbsp;
+                    <a href="contact.html">Contact</a>
+                </p>
+                <p style="margin-top:8px; font-size:0.85rem;">
+                    Official school website • Serving students, parents and the community of Papua New Guinea
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Simple dropdown support for mobile
+        document.querySelectorAll('.main-nav > ul > li').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && this.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    this.classList.toggle('open');
+                }
+            });
+        });
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

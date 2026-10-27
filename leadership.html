@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leadership team of Lae Secondary School – Meet the Principal, Deputy Principals and School Board guiding our secondary school in Papua New Guinea.">
+    <meta name="keywords" content="school leadership, principal, school board, secondary school Papua New Guinea">
+    <meta name="author" content="Lae Secondary School">
+     <!-- Make the page fit Android phones and tablets -->
+    
+
+    <!-- Browser compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Leadership | Lae Secondary School</title>
+    
+    <link rel="icon" href="images/school-logo.png" type="image/x-icon">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a3d62;
+            --primary-dark: #072c4a;
+            --secondary: #c0392b;
+            --accent: #f1c40f;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.4rem;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .school-identity h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .school-identity .motto {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+        }
+
+        .main-nav > ul > li > a {
+            display: block;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--primary);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+        }
+
+        .main-nav > ul > li > a:hover,
+        .main-nav > ul > li > a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .main-nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .main-nav li:hover > .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--text);
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            padding-left: 24px;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.9), rgba(7, 44, 74, 0.95)), 
+                        url('images/campus-hero.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 70px 0 50px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .content-area h2 {
+            color: var(--primary);
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .content-area h3 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin: 35px 0 15px;
+        }
+
+        .content-area p {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+
+        /* Principal Feature */
+        .principal-feature {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+
+        .principal-photo {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 5rem;
+            min-height: 320px;
+        }
+
+        .principal-info {
+            padding: 35px;
+        }
+
+        .principal-info .role {
+            display: inline-block;
+            background: rgba(192, 57, 43, 0.1);
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .principal-info h3 {
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin: 0 0 8px 0;
+        }
+
+        .principal-info .title {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .principal-info blockquote {
+            font-style: italic;
+            color: var(--text);
+            border-left: 4px solid var(--accent);
+            padding-left: 18px;
+            margin: 20px 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Leadership Cards */
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin: 25px 0 40px;
+        }
+
+        .leader-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .leader-photo {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3.5rem;
+        }
+
+        .leader-info {
+            padding: 22px 20px;
+        }
+
+        .leader-info h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .leader-info .role {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .leader-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Board Section */
+        .board-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin: 30px 0;
+        }
+
+        .board-section h3 {
+            margin-top: 0;
+        }
+
+        .board-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .board-item {
+            background: var(--light);
+            padding: 16px 18px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .board-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .board-item span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Governance Note */
+        .governance-note {
+            background: linear-gradient(135deg, rgba(10, 61, 98, 0.05), rgba(7, 44, 74, 0.08));
+            border: 1px solid rgba(10, 61, 98, 0.15);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .governance-note h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .sidebar-card ul {
+            list-style: none;
+        }
+
+        .sidebar-card li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-card a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-card a:hover,
+        .sidebar-card a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-box h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .cta-box p {
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+
+            .principal-feature {
+                grid-template-columns: 1fr;
+            }
+
+            .principal-photo {
+                min-height: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                padding: 15px;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 14px 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .main-nav .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: #f8f9fa;
+            }
+
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .school-identity h1 {
+                font-size: 1.2rem;
+            }
+
+            .btn-outline-light {
+                margin-left: 0;
+                margin-top: 10px;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-placeholder {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            .page-hero {
+                padding: 50px 0 40px;
+            }
+
+            .principal-info {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo-area">
+                    <div class="logo-placeholder">LSS</div>
+                    <div class="school-identity">
+                        <h1>Lae Secondary School</h1>
+                        <div class="motto">Lae District • Morobe Province</div>
+                    </div>
+                </div>
+
+                <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="about.html" class="active">About Us</a>
+                            <div class="dropdown">
+                                <a href="about.html">School Profile</a>
+                                <a href="vision-mission.html">Vision & Mission</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="policies.html">Policies & Rules</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="academics.html">Academics</a>
+                            <div class="dropdown">
+                                <a href="academics.html">Programs Overview</a>
+                                <a href="departments.html">Subject Departments</a>
+                                <a href="academic-calendar.html">Academic Calendar</a>
+                                <a href="timetable.html">Timetables</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="admissions.html">Admissions</a>
+                            <div class="dropdown">
+                                <a href="admissions.html">How to Apply</a>
+                                <a href="application.html">Application Form</a>
+                                <a href="fees.html">Fees & Charges</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="students.html">Students</a>
+                            <div class="dropdown">
+                                <a href="students.html">Student Life</a>
+                                <a href="student-leadership.html">Student Leadership</a>
+                                <a href="sports.html">Sports & Clubs</a>
+                                <a href="boarding.html">Boarding</a>
+                            </div>
+                        </li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>School Leadership</h1>
+            <p>Meet the Principal and learn about the school’s leadership and governance arrangements.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp;›&nbsp; 
+                <a href="about.html">About Us</a> &nbsp;›&nbsp; 
+                Leadership
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                
+                <!-- MAIN CONTENT AREA -->
+                <div class="content-area">
+
+                    <h2 id="principal">Principal</h2>
+
+                    <!-- Principal Feature -->
+                    <div class="principal-feature">
+                        <div class="principal-photo">👤</div>
+                        <div class="principal-info">
+                            <span class="role">Principal</span>
+                            <h3>Mr Christopher Raymond</h3>
+                            <div class="title">Principal, Lae Secondary School</div>
+                            <p>
+                                The Principal leads the school’s administration and educational work. For current information about school leadership responsibilities and arrangements, please contact the school office.
+                            </p>
+                            <blockquote>Official messages from the Principal will be shared when confirmed by the school.</blockquote>
+                            <p style="margin-bottom:0; font-size:0.95rem; color: var(--text-light);">
+                                For official correspondence, please contact the Principal through the school office.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 id="deputies">Deputy Principals & Senior Leadership</h3>
+                    <p>
+                        The names and current responsibilities of Deputy Principals and other senior leaders should be confirmed with the school administration.
+                    </p>
+
+                    <div class="leaders-grid">
+                        <div class="leader-card">
+                            <div class="leader-photo">👤</div>
+                            <div class="leader-info">
+                                <h4>Details to be confirmed</h4>
+                                <div class="role">Deputy Principal (Academic)</div>
+                                <p>Oversees curriculum implementation, assessment, teacher development and academic standards across the school.</p>
+                            </div>
+                        </div>
+
+                        <div class="leader-card">
+                            <div class="leader-photo">👤</div>
+                            <div class="leader-info">
+                                <h4>Details to be confirmed</h4>
+                                <div class="role">Deputy Principal (Administration / Welfare)</div>
+                                <p>Responsible for student welfare, discipline, boarding (if applicable), and day-to-day school administration.</p>
+                            </div>
+                        </div>
+
+                        <div class="leader-card">
+                            <div class="leader-photo">👤</div>
+                            <div class="leader-info">
+                                <h4>Details to be confirmed</h4>
+                                <div class="role">Senior Teacher / Head of Department</div>
+                                <p>Supports curriculum leadership and coordinates subject departments and teaching programs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 id="board">School Board of Management</h3>
+                    <p>
+                        The School Board of Management provides governance and strategic oversight. 
+                        It works in partnership with the Principal, staff, parents and education authorities to ensure the school is well managed, 
+                        accountable and focused on student achievement and welfare.
+                    </p>
+
+                    <div class="board-section">
+                        <h3 style="margin-top:0; font-size:1.25rem;">School Board of Management</h3>
+                        <p style="margin-bottom:15px; font-size:0.95rem; color: var(--text-light);">
+                            The names and positions of current Board members should be verified with the school before publication.
+                        </p>
+
+                        <div class="board-list">
+                            <div class="board-item">
+                                <strong>Chairperson</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Deputy Chairperson</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Principal (Ex-Officio)</strong>
+                                <span>Mr Christopher Raymond</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Teacher Representative</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Parent Representatives</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Community / Church Representatives</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Women’s Representative</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                            <div class="board-item">
+                                <strong>Provincial / District Education</strong>
+                                <span>To be confirmed by the school</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="governance-note">
+                        <h4>Governance & Accountability</h4>
+                        <p style="margin-bottom:0;">
+                            For information about the Board’s current membership, responsibilities and meeting arrangements, please contact the school administration.
+                        </p>
+                    </div>
+
+                    <h3>Heads of Departments</h3>
+                    <p>
+                        For current details about Heads of Departments and other staff, please contact the school administration or consult the <a href="staff.html" style="color: var(--secondary); font-weight: 600;">Staff Directory</a> page if available.
+                    </p>
+
+                    <!-- CTA Box -->
+                    <div class="cta-box">
+                        <h3>Connect With Us</h3>
+                        <p>For official enquiries, appointments or correspondence with school leadership, please contact the school office.</p>
+                        <a href="mailto:administration@laesecondary.edu.pg" class="btn btn-primary">Contact the School</a>
+                        <a href="staff.html" class="btn btn-outline-light">View Staff Directory</a>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>About Us</h3>
+                        <ul>
+                            <li><a href="about.html">School Profile</a></li>
+                            <li><a href="vision-mission.html">Vision & Mission</a></li>
+                            <li><a href="leadership.html" class="active">Leadership</a></li>
+                            <li><a href="policies.html">Policies & Rules</a></li>
+                            <li><a href="staff.html">Staff Directory</a></li>
+                            <li><a href="facilities.html">School Facilities</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Leadership Structure</h3>
+                        <ul>
+                            <li><a href="#principal">Principal</a></li>
+                            <li><a href="#deputies">Deputy Principals</a></li>
+                            <li><a href="#board">School Board</a></li>
+                            <li><a href="staff.html">Heads of Departments</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Links</h3>
+                        <ul>
+                            <li><a href="policies.html">School Policies</a></li>
+                            <li><a href="parents.html">Parents & Guardians</a></li>
+                            <li><a href="news.html">School News</a></li>
+                            <li><a href="contact.html">Contact Office</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Lae Secondary School</h3>
+                    <p>
+                        A secondary school committed to academic excellence, 
+                        character development and service to the people of Papua New Guinea.
+                    </p>
+                    <p style="margin-top:15px;">
+                        <strong>Location:</strong> Lae District • Morobe Province
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About the School</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="students.html">Student Life</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="academic-calendar.html">Academic Calendar</a></li>
+                        <li><a href="fees.html">Fees & Charges</a></li>
+                        <li><a href="policies.html">School Policies</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="parents.html">Parents & Guardians</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📍 Lae Secondary School, PO Box 792, Lae 411<br>
+                       Lae District, Morobe Province<br>
+                       Papua New Guinea</p>
+                    <p>📞 <a href="tel:+67578289085">+675 7828 9085</a></p>
+                    <p>✉️ <a href="mailto:administration@laesecondary.edu.pg">administration@laesecondary.edu.pg</a></p>
+                    <p>Public enquiries: <a href="mailto:info.reception@laesecondary.edu.pg">info.reception@laesecondary.edu.pg</a></p>
+                    <p>Principal: Mr Christopher Raymond<br>
+                       Phone: <a href="tel:+67581302423">+675 81302423</a><br>
+                       Email: <a href="mailto:csraymond.principal@laesecondary.edu.pg">csraymond.principal@laesecondary.edu.pg</a></p>
+                    <p style="margin-top:12px; font-size:0.85rem;">
+                        Contact the school to confirm office hours.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Lae Secondary School. All rights reserved. &nbsp;|&nbsp;
+                    <a href="policies.html">Privacy Policy</a> &nbsp;|&nbsp;
+                    <a href="contact.html">Contact</a>
+                </p>
+                <p style="margin-top:8px; font-size:0.85rem;">
+                    School information • Lae District, Morobe Province, Papua New Guinea
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.main-nav > ul > li').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && this.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    this.classList.toggle('open');
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

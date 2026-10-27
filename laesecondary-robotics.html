@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Discover Lae Secondary School’s robotics journey, STEM learning, robotics laboratory, FIRST Global Challenge participation, achievements and future opportunities in Papua New Guinea." name="description"/>
+<meta content="Lae Secondary School robotics, FIRST Global Challenge, Papua New Guinea robotics, STEM education, robotics laboratory, student engineering, Morobe Province" name="keywords"/>
+<meta content="Lae Secondary School" name="author"/>
+<!-- Make the page fit Android phones and tablets -->
+<!-- Browser compatibility -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Robotics, STEM Innovation &amp; Global Achievement | Lae Secondary School</title>
+<!-- Favicon placeholder -->
+<link href="images/school-logo.png" rel="icon" type="image/x-icon"/>
+<style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a3d62;       /* Deep navy blue */
+            --primary-dark: #072c4a;
+            --secondary: #c0392b;     /* Strong red accent */
+            --accent: #f1c40f;        /* Gold */
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        
+        
+/* Make sizing predictable */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure the website fits the screen */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Make images fit their containers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make the main content responsive */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Android phones and smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+        .container {
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .top-bar a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-placeholder {
+            width: 90px;
+            height: 70px;
+            background: linear-gradient(100deg, var(--primary), var(--primary-light));
+            border-radius: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.0rem;
+            border: 4px solid var(--accent);
+            flex-shrink: 5;
+        }
+
+        .school-identity h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .school-identity .motto {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .main-nav > ul > li {
+            position: relative;
+        }
+
+        .main-nav > ul > li > a {
+            display: block;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--primary);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+        }
+
+        .main-nav > ul > li > a:hover,
+        .main-nav > ul > li > a.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .main-nav .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .main-nav li:hover > .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--text);
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+            padding-left: 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.25), rgba(7, 44, 74, 0.9)), 
+                        url('images/home-hero.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* ensures safe area for children */
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2; /* so text & buttons are always above the fixed image */
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* ===== QUICK LINKS / FEATURE CARDS ===== */
+        .features {
+            padding: 70px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 15px auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 30px 25px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card .btn-link {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .feature-card .btn-link:hover {
+            color: var(--primary);
+        }
+
+        /* ===== LOGO ===== */  
+        
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .school-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        
+             /* ===== Principal ===== */  
+        
+        .principal-placeholder {
+            width: 85px;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .principal-content {
+            width: 110%;
+            height: 110%;
+            object-fit: contain;
+            display: block;
+        }   
+        
+        
+        /* ===== ANNOUNCEMENTS ===== */
+        .announcements {
+            padding: 70px 0;
+            background-color: #f0f4f8;
+        }
+
+        .announcements-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+            background: linear-gradient(135deg, #ddd, #bbb);
+        }
+
+        .news-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .news-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .news-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .sidebar-notices {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .notice-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .notice-item h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .notice-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .notice-item a {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        
+        /* Center the student photograph */
+.student-image-container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 24px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f2f4f7;
+}
+
+/* Rectangular student photograph */
+.student-field-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Keep the news card professional */
+.news-card {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive image on mobile devices */
+@media (max-width: 600px) {
+    .student-image-container {
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .student-field-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .news-card {
+        padding: 16px;
+    }
+}
+
+        /* ===== PRINCIPAL MESSAGE TEASER ===== */
+        .principal-teaser {
+            padding: 70px 0;
+            background-color: var(--white);
+        }
+
+        .principal-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: center;
+            background: var(--light);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid #e9ecef;
+        }
+
+        .principal-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            border: 5px solid var(--accent);
+            margin: 0 auto;
+        }
+
+        .principal-text h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .principal-text p {
+            color: var(--text);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .principal-text .signature {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        /* Principal message: centered portrait and message */
+        .principal-teaser .principal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 28px;
+        }
+
+        .principal-teaser .principal-placeholder {
+            width: 280px;
+            height: 280px;
+            max-width: 80vw;
+            max-height: 80vw;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            overflow: hidden;
+            margin: 0 auto;
+            flex-shrink: 0;
+            background: #e9eef3;
+        }
+
+        .principal-teaser .principal-placeholder .school-principal {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .principal-teaser .principal-text {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p, .footer-col li {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: var(--white);
+            opacity: 0.85;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .announcements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principal-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .principal-photo {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--white);
+                padding: 15px;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .main-nav > ul > li > a {
+                padding: 14px 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .main-nav .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                background: #f8f9fa;
+            }
+
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.15rem;
+            }
+
+            .school-identity h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 70px 0 50px;
+            }
+
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo-placeholder {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+        }
+
+
+        /* ===== RESPONSIVE LAYOUT REFINEMENTS ===== */
+
+        .container {
+            width: min(100%, 1200px);
+            max-width: 1200px;
+            padding-left: clamp(14px, 3vw, 28px);
+            padding-right: clamp(14px, 3vw, 28px);
+        }
+        .header-main {
+            width: min(100%, 1500px);
+            margin: 0 auto;
+            padding: 14px clamp(14px, 2vw, 28px);
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+        .logo-area {
+            min-width: 0;
+            flex: 0 1 auto;
+            gap: 14px;
+        }
+        .logo-placeholder {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            flex: 0 0 76px;
+        }
+        .school-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .school-identity {
+            min-width: 0;
+        }
+        .school-identity h1 {
+            font-size: clamp(1.15rem, 2vw, 1.5rem);
+            overflow-wrap: normal;
+        }
+        .main-nav {
+            min-width: 0;
+            max-width: 100%;
+        }
+        .main-nav > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 3px;
+        }
+        .main-nav > ul > li > a {
+            padding: 10px clamp(8px, 1vw, 13px);
+            font-size: clamp(.82rem, .95vw, .95rem);
+            white-space: normal;
+            text-align: center;
+        }
+        .main-nav .dropdown {
+            min-width: 210px;
+            max-width: min(280px, 90vw);
+        }
+        .dropdown a {
+            overflow-wrap: break-word;
+        }
+        .hero h2 {
+            font-size: clamp(1.75rem, 4vw, 2.8rem);
+        }
+        .hero .tagline {
+            font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+        }
+        .announcements-grid {
+            min-width: 0;
+            grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+        }
+        .news-card, .sidebar-notices, .feature-card, .notice-item,
+        .principal-content, .footer-col {
+            min-width: 0;
+        }
+        .principal-teaser .principal-content {
+            width: 100%;
+            height: auto;
+            padding: clamp(22px, 4vw, 40px);
+        }
+        .principal-teaser .principal-placeholder {
+            width: clamp(170px, 24vw, 280px);
+            height: clamp(170px, 24vw, 280px);
+            max-width: 80vw;
+            max-height: 80vw;
+        }
+        .principal-teaser .principal-text p {
+            font-style: normal;
+            line-height: 1.75;
+        }
+        .footer-grid {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+            gap: clamp(24px, 4vw, 40px);
+        }
+        .footer a, .top-bar a {
+            overflow-wrap: anywhere;
+        }
+        @media (max-width: 1100px) {
+            .header-main {
+                justify-content: space-between;
+            }
+            .main-nav {
+                flex: 1 0 100%;
+                width: 100%;
+            }
+            .main-nav > ul {
+                justify-content: center;
+            }
+            .announcements-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .top-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+            .header-main {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .logo-area {
+                flex: 1 1 auto;
+                max-width: calc(100% - 54px);
+            }
+            .logo-placeholder {
+                width: 58px;
+                height: 58px;
+                flex-basis: 58px;
+            }
+            .school-identity h1 {
+                font-size: clamp(1rem, 4vw, 1.25rem);
+            }
+            .school-identity .motto {
+                font-size: .78rem;
+                letter-spacing: .2px;
+            }
+            .nav-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 44px;
+                min-height: 44px;
+                padding: 6px 10px;
+                border: 1px solid #d8e0e8;
+                border-radius: 8px;
+                background: #fff;
+                flex: 0 0 auto;
+            }
+            .main-nav {
+                display: none;
+                position: static;
+                flex: 1 0 100%;
+                width: 100%;
+                max-width: 100%;
+                padding: 8px 0 0;
+                box-shadow: none;
+                background: transparent;
+            }
+            .main-nav.active {
+                display: block;
+            }
+            .main-nav > ul {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 3px;
+                width: 100%;
+            }
+            .main-nav > ul > li {
+                width: 100%;
+            }
+            .main-nav > ul > li > a {
+                width: 100%;
+                text-align: left;
+                padding: 12px 14px;
+                font-size: .96rem;
+                border-radius: 6px;
+            }
+            .main-nav .dropdown {
+                position: static;
+                display: none;
+                width: 100%;
+                min-width: 0;
+                max-width: 100%;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border-radius: 6px;
+                margin: 2px 0 8px;
+                padding-left: 12px;
+                overflow: visible;
+            }
+            .main-nav li.open > .dropdown {
+                display: block;
+            }
+            .dropdown a {
+                padding: 10px 14px;
+                white-space: normal;
+            }
+            .hero {
+                padding: 64px 0 52px;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .features, .announcements, .principal-teaser {
+                padding: 48px 0;
+            }
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+            }
+            .principal-teaser .principal-content {
+                gap: 22px;
+            }
+            .cta {
+                padding: 46px 0;
+            }
+            .footer {
+                padding: 44px 0 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+            .top-bar {
+                font-size: .78rem;
+            }
+            .top-bar .container > div {
+                max-width: 100%;
+            }
+            .school-identity h1 {
+                font-size: 1rem;
+            }
+            .school-identity .motto {
+                font-size: .72rem;
+            }
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .section-title h2, .cta h2 {
+                font-size: 1.65rem;
+            }
+            .news-content {
+                padding: 20px;
+            }
+            .principal-teaser .principal-content {
+                padding: 20px 16px;
+            }
+            .principal-teaser .principal-placeholder {
+                width: min(220px, 68vw);
+                height: min(220px, 68vw);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+
+
+/* ===== STEM & ROBOTICS SHOWCASE ===== */
+.robotics-section {
+    padding: 76px 0;
+    color: #f4f8fc;
+    background:
+        radial-gradient(ellipse at 75% 45%, rgba(30,105,150,.24), transparent 48%),
+        linear-gradient(135deg, #071827 0%, #0a263b 55%, #06131f 100%);
+    overflow: hidden;
+}
+.robotics-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+}
+.robotics-copy .eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #f1c40f;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+.robotics-copy h2 {
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+}
+.robotics-copy p {
+    max-width: 560px;
+    color: #c2d1df;
+    line-height: 1.85;
+    margin-bottom: 22px;
+}
+.robotics-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 28px;
+}
+.robotics-points span {
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
+    padding: 7px 12px;
+    color: #e7f3fc;
+    font-size: .82rem;
+}
+.robotics-lab {
+    position: relative;
+    min-width: 0;
+    min-height: 370px;
+    border: 1px solid rgba(170,218,245,.2);
+    border-radius: 18px;
+    overflow: hidden;
+    background:
+      linear-gradient(rgba(96,165,205,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96,165,205,.075) 1px, transparent 1px),
+      radial-gradient(ellipse at 50% 65%, #183a50, #071522 72%);
+    background-size: 28px 28px, 28px 28px, auto;
+    box-shadow: 0 22px 55px rgba(0,0,0,.3);
+}
+.robotics-lab::before {
+    content: "STEM LAB  /  ROBOTICS SIMULATION";
+    position: absolute;
+    z-index: 4;
+    top: 16px;
+    left: 18px;
+    color: #a9c9dc;
+    font: 700 .68rem/1.4 Arial, sans-serif;
+    letter-spacing: 1.7px;
+}
+.robotics-lab::after {
+    content: "LIVE MOTION";
+    position: absolute;
+    z-index: 4;
+    right: 18px;
+    top: 16px;
+    color: #8df2bd;
+    font: 700 .65rem/1.4 Arial, sans-serif;
+    letter-spacing: 1px;
+}
+.robotics-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    position: relative;
+    z-index: 2;
+}
+.robot-base { fill: url(#robotMetal); stroke: #d5e6ef; stroke-width: 2; }
+.robot-joint { fill: #263e50; stroke: #d6e7f1; stroke-width: 4; }
+.robot-highlight { fill: none; stroke: #f5c542; stroke-width: 4; stroke-linecap: round; opacity: .9; }
+.robot-arm-1, .robot-arm-2, .robot-wrist, .robot-gripper {
+    transform-box: view-box;
+}
+.robot-arm-1 {
+    transform-origin: 190px 264px;
+    animation: robotShoulder 5s ease-in-out infinite alternate;
+}
+.robot-arm-2 {
+    transform-origin: 190px 155px;
+    animation: robotElbow 5s ease-in-out infinite alternate;
+}
+.robot-wrist {
+    transform-origin: 292px 159px;
+    animation: robotWrist 5s ease-in-out infinite alternate;
+}
+.robot-gripper {
+    transform-origin: 310px 184px;
+    animation: robotGrip 5s ease-in-out infinite alternate;
+}
+@keyframes robotShoulder {
+    0%, 10% { transform: rotate(-12deg); }
+    48%, 72% { transform: rotate(17deg); }
+    100% { transform: rotate(-4deg); }
+}
+@keyframes robotElbow {
+    0%, 10% { transform: rotate(18deg); }
+    48%, 72% { transform: rotate(-27deg); }
+    100% { transform: rotate(8deg); }
+}
+@keyframes robotWrist {
+    0%, 10% { transform: rotate(-12deg); }
+    48%, 72% { transform: rotate(22deg); }
+    100% { transform: rotate(-6deg); }
+}
+@keyframes robotGrip {
+    0%, 20%, 100% { transform: rotate(0deg); }
+    35%, 70% { transform: rotate(-9deg); }
+}
+.robot-status {
+    position: absolute;
+    z-index: 5;
+    bottom: 15px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b9d3e4;
+    font-size: .75rem;
+    letter-spacing: .5px;
+}
+.robot-status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #8df2bd; box-shadow: 0 0 10px #8df2bd;
+}
+.robotics-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 12px;
+    right: 14px;
+}
+.robotics-controls button {
+    border: 1px solid rgba(255,255,255,.35);
+    color: #fff;
+    background: rgba(3,15,25,.8);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: .78rem;
+}
+.robotics-controls button:hover { background: #0a3d62; }
+.robotics-lab.paused .robot-arm-1,
+.robotics-lab.paused .robot-arm-2,
+.robotics-lab.paused .robot-wrist,
+.robotics-lab.paused .robot-gripper {
+    animation-play-state: paused;
+}
+@media (max-width: 800px) {
+    .robotics-section { padding: 54px 0; }
+    .robotics-layout { grid-template-columns: 1fr; }
+    .robotics-lab { min-height: 280px; }
+    .robotics-svg { min-height: 290px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .robot-arm-1, .robot-arm-2, .robot-wrist, .robot-gripper {
+        animation: none !important;
+    }
+}
+
+    
+
+/* ===== ROBOTICS PAGE EXTENSIONS — matching the main school website ===== */
+:root { --robot-ink: #102d43; --robot-blue: #0a3d62; --robot-red: #c0392b; --robot-gold: #f1c40f; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { overflow-x: hidden; }
+a { text-decoration: none; }
+.robotics-hero {
+  color: var(--white);
+  background: radial-gradient(circle at 80% 20%, rgba(241,196,15,.18), transparent 28%), linear-gradient(120deg, #061e31 0%, #0a3d62 56%, #123d56 100%);
+  padding: 72px 0 58px; position: relative; overflow: hidden;
+}
+.robotics-hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(90deg, transparent, #000); }
+.robotics-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; position: relative; z-index: 1; }
+.robotics-eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 800; letter-spacing: 1.5px; font-size: .78rem; text-transform: uppercase; margin-bottom: 16px; }
+.robotics-hero h2 { font-size: clamp(2.2rem, 4vw, 3.55rem); line-height: 1.08; margin-bottom: 20px; max-width: 780px; }
+.robotics-hero p { font-size: 1.08rem; line-height: 1.8; color: #e8f0f5; max-width: 720px; margin-bottom: 25px; }
+.robotics-hero .hero-buttons { justify-content: flex-start; }
+.robotics-hero .btn-outline { border-color: rgba(255,255,255,.75); }
+.robotics-hero-visual { background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.025)); border: 1px solid rgba(255,255,255,.17); border-radius: 18px; padding: 18px; box-shadow: 0 24px 70px rgba(0,0,0,.25); min-width: 0; }
+.robotics-hero-visual .robotics-svg { width: 100%; max-height: 350px; display: block; }
+.robotics-hero-note { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid rgba(255,255,255,.15); padding: 12px 4px 0; color: #d8e7f0; font-size: .8rem; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #7bedb0; display: inline-block; margin-right: 7px; box-shadow: 0 0 0 4px rgba(123,237,176,.12); }
+.robotics-subnav-wrap { background: #fff; border-bottom: 1px solid #e2e8ee; position: sticky; top: 0; z-index: 800; box-shadow: 0 3px 10px rgba(0,0,0,.04); }
+.robotics-subnav { display: flex; align-items: center; gap: 8px; overflow-x: auto; padding-top: 12px; padding-bottom: 12px; scrollbar-width: thin; }
+.robotics-subnav a { color: var(--primary); font-size: .84rem; font-weight: 700; white-space: nowrap; padding: 8px 12px; border-radius: 30px; background: #f1f5f8; }
+.robotics-subnav a:hover, .robotics-subnav a:focus { color: #fff; background: var(--primary); }
+.robotics-section-block { padding: 68px 0; }
+.robotics-section-block.alt { background: #f0f4f8; }
+.robotics-section-block.white { background: #fff; }
+.robotics-section-block.dark { background: linear-gradient(135deg, #082b45, #0a3d62); color: #fff; }
+.robotics-section-block.dark .section-title h2, .robotics-section-block.dark h3 { color: #fff; }
+.robotics-section-block.dark .section-title p, .robotics-section-block.dark p { color: #dbe7ef; }
+.robotics-section-block .section-title { margin-bottom: 34px; }
+.robotics-section-block .section-title h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.robotics-section-block p { line-height: 1.78; color: var(--text-light); margin-bottom: 14px; }
+.robotics-lead { max-width: 900px; margin: 0 auto 28px; text-align: center; font-size: 1.06rem; }
+.robotics-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.robotics-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.robotics-card { background: #fff; border: 1px solid #e3eaf0; border-radius: 12px; padding: 25px; height: 100%; box-shadow: 0 4px 15px rgba(12,42,62,.045); }
+.robotics-card h3 { color: var(--primary); margin: 12px 0 10px; font-size: 1.15rem; line-height: 1.35; }
+.robotics-card p { font-size: .95rem; }
+.robotics-card ul, .robotics-copy-list { padding-left: 20px; color: var(--text-light); line-height: 1.8; }
+.robotics-card li, .robotics-copy-list li { margin-bottom: 6px; }
+.robotics-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: #eaf2f8; color: var(--primary); font-size: 1.45rem; }
+.robotics-stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin-top: 32px; }
+.robotics-stat { padding: 22px 16px; border-radius: 12px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.15); text-align: center; }
+.robotics-stat strong { display: block; font-size: clamp(1.7rem,3vw,2.5rem); line-height: 1.2; color: var(--accent); margin-bottom: 7px; }
+.robotics-stat span { color: #e2edf4; font-size: .83rem; }
+.robotics-timeline { position: relative; max-width: 1000px; margin: 0 auto; }
+.robotics-timeline::before { content: ''; position: absolute; left: 99px; top: 12px; bottom: 12px; width: 2px; background: #cbd8e2; }
+.timeline-item { display: grid; grid-template-columns: 78px 1fr; gap: 42px; position: relative; margin-bottom: 22px; }
+.timeline-year { font-size: 1.08rem; font-weight: 800; color: var(--primary); text-align: right; padding-top: 18px; }
+.timeline-content { position: relative; background: #fff; border: 1px solid #e2e8ed; border-radius: 12px; padding: 19px 22px; box-shadow: 0 3px 12px rgba(0,0,0,.035); }
+.timeline-content::before { content: ''; position: absolute; left: -31px; top: 23px; width: 12px; height: 12px; border: 3px solid #fff; border-radius: 50%; background: var(--secondary); box-shadow: 0 0 0 2px var(--secondary); }
+.timeline-content h3 { color: var(--primary); margin-bottom: 6px; font-size: 1.08rem; }
+.timeline-content p { margin: 0; font-size: .94rem; }
+.result-badge { display: inline-block; background: #e8f3ea; color: #23633a; border-radius: 30px; padding: 5px 10px; font-size: .78rem; font-weight: 800; margin-top: 10px; }
+.robotics-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid #dfe7ed; background: #fff; }
+.robotics-table { width: 100%; border-collapse: collapse; min-width: 620px; }
+.robotics-table th, .robotics-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #e7edf2; vertical-align: top; }
+.robotics-table th { background: #0a3d62; color: #fff; font-size: .86rem; }
+.robotics-table td { color: #3c4c58; font-size: .91rem; }
+.robotics-table tr:last-child td { border-bottom: 0; }
+.source-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.source-list li { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.13); padding: 15px 18px; border-radius: 10px; }
+.source-list a { color: #ffe47b; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.source-list small { display: block; color: #d6e3eb; margin-top: 5px; line-height: 1.6; }
+.notice-box { border-left: 4px solid var(--accent); background: #fff9df; padding: 17px 20px; border-radius: 0 10px 10px 0; color: #4f4a36; margin: 20px 0; }
+.robotics-cta { background: linear-gradient(135deg, #c0392b, #8e2b23); color: #fff; padding: 54px 0; }
+.robotics-cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+.robotics-cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 10px; }
+.robotics-cta p { max-width: 760px; color: #ffefec; line-height: 1.7; }
+.robotics-cta .btn { white-space: nowrap; background: #fff; color: var(--primary); }
+.robotics-faq details { border: 1px solid #dfe7ed; background: #fff; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px; }
+.robotics-faq summary { cursor: pointer; color: var(--primary); font-weight: 800; }
+.robotics-faq details p { margin: 12px 0 0; }
+.robotics-breadcrumb { background: #f5f7f9; border-bottom: 1px solid #e5ebf0; padding: 10px 0; font-size: .85rem; color: #63717c; }
+.robotics-breadcrumb a { color: var(--primary); font-weight: 700; }
+.back-top { position: fixed; right: 18px; bottom: 18px; z-index: 1200; border: 0; border-radius: 50%; width: 44px; height: 44px; background: var(--primary); color: #fff; font-size: 1.2rem; box-shadow: 0 5px 18px rgba(0,0,0,.2); cursor: pointer; display: none; }
+.back-top.visible { display: block; }
+.robotics-photo-placeholder { min-height: 210px; border-radius: 12px; background: linear-gradient(135deg, #dce8ef, #edf3f6); display: grid; place-items: center; text-align: center; padding: 24px; color: #536a79; border: 1px dashed #9eb4c3; }
+.robotics-photo-placeholder strong { display: block; color: var(--primary); margin-bottom: 8px; }
+.robotics-section-block a:not(.btn) { color: var(--secondary); font-weight: 700; text-underline-offset: 3px; }
+.robotics-section-block.dark a:not(.btn) { color: #ffe47b; }
+@media (max-width: 1050px) {
+  .robotics-hero-grid { grid-template-columns: 1fr 0.85fr; gap: 25px; }
+  .robotics-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .container { padding-left: 28px; padding-right: 28px; }
+}
+@media (max-width: 768px) {
+  .robotics-hero { padding: 48px 0 42px; }
+  .robotics-hero-grid, .robotics-grid, .robotics-grid.two { grid-template-columns: 1fr; }
+  .robotics-hero-visual { max-width: 520px; width: 100%; margin: 0 auto; }
+  .robotics-stat-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .robotics-section-block { padding: 48px 0; }
+  .robotics-timeline::before { left: 58px; }
+  .timeline-item { grid-template-columns: 44px 1fr; gap: 28px; }
+  .timeline-year { font-size: .95rem; }
+  .timeline-content { padding: 16px; }
+  .timeline-content::before { left: -23px; }
+  .robotics-cta-inner { align-items: flex-start; flex-direction: column; }
+  .robotics-cta .btn { white-space: normal; }
+  .robotics-subnav-wrap { top: 0; }
+  .robotics-hero h2 { font-size: 2.15rem; }
+  .container { padding-left: 16px; padding-right: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+<div class="header-main">
+<div class="logo-area">
+<div class="logo-placeholder">
+<img alt="Lae Secondary School Logo" class="school-logo" src="images/school-logo.png"/>
+</div>
+<div class="school-identity">
+<h1>Lae Secondary School</h1>
+<div class="motto">Learning • Leadership • Service</div>
+</div>
+</div>
+<button aria-label="Toggle navigation" class="nav-toggle" onclick="toggleNav()">☰</button>
+<nav class="main-nav" id="mainNav">
+<ul>
+<li><a class="" href="index.html">Home</a></li>
+<li>
+<a href="about.html">About Us</a>
+<div class="dropdown">
+<a href="about.html">School Profile</a>
+<a href="vision-mission.html">Vision &amp; Mission</a>
+<a href="leadership.html">Leadership</a>
+<a href="policies.html">Policies &amp; Rules</a>
+</div>
+</li>
+<li>
+<a href="academics.html">Academics</a>
+<div class="dropdown">
+<a href="academics.html">Programs Overview</a>
+<a href="departments.html">Subject Departments</a>
+<a href="academic-calendar.html">Academic Calendar</a>
+<a href="timetable.html">Timetables</a>
+</div>
+</li>
+<li>
+<a href="admissions.html">Admissions</a>
+<div class="dropdown">
+<a href="admissions.html">How to Apply</a>
+<a href="application.html">Application Form</a>
+<a href="fees.html">Fees &amp; Charges</a>
+</div>
+</li>
+<li>
+<a href="students.html">Students</a>
+<div class="dropdown">
+<a href="students.html">Student Life</a>
+<a href="student-leadership.html">Student Leadership</a>
+<a href="sports.html">Sports &amp; Clubs</a>
+<a href="boarding.html">Boarding</a>
+</div>
+</li>
+<li><a class="active" href="laesecondary-robotics.html">Robotics</a></li><li><a href="news.html">News</a></li>
+<li><a href="downloads.html">Downloads</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header><div class="robotics-breadcrumb"><div class="container"><a href="index.html">Home</a>  ›  <span>Robotics, STEM Innovation &amp; Global Achievement</span></div></div>
+<section class="robotics-hero" id="top">
+<div class="container robotics-hero-grid">
+<div>
+<span class="robotics-eyebrow">STEM • ENGINEERING • INNOVATION</span>
+<h2>Robotics, STEM Innovation &amp; Global Achievement</h2>
+<p>Discover Lae Secondary School’s robotics journey—from students assembling their first competition robots to representing Papua New Guinea on the international stage. Explore the laboratory, learning opportunities, competition history and the people helping young innovators build confidence through science and technology.</p>
+<div class="hero-buttons">
+<a class="btn btn-primary" href="#journey">Explore Our Journey</a>
+<a class="btn btn-outline" href="#achievements">View Achievements</a>
+</div>
+<p style="font-size:.84rem;margin-top:20px;color:#cbdde8;margin-bottom:0;">A school robotics initiative documented by public reporting and FIRST Global team profiles.</p>
+</div>
+<div class="robotics-hero-visual">
+<svg aria-label="Animated industrial robotic arm moving above a conveyor belt" class="robotics-svg" role="img" viewbox="0 0 440 350">
+<defs>
+<lineargradient id="robotMetal" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#f8c94f"></stop>
+<stop offset=".45" stop-color="#e6a928"></stop>
+<stop offset="1" stop-color="#9c6816"></stop>
+</lineargradient>
+<lineargradient id="robotSteel" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#dce8f0"></stop>
+<stop offset=".45" stop-color="#7892a5"></stop>
+<stop offset="1" stop-color="#314c60"></stop>
+</lineargradient>
+<lineargradient id="belt" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#526e80"></stop>
+<stop offset="1" stop-color="#182b3b"></stop>
+</lineargradient>
+<filter height="200%" id="robotShadow" width="200%" x="-50%" y="-50%">
+<fegaussianblur stddeviation="4"></fegaussianblur>
+</filter>
+</defs>
+<!-- Back wall and floor -->
+<ellipse cx="220" cy="296" fill="#020a11" opacity=".6" rx="190" ry="20"></ellipse>
+<path d="M20 279 L420 279 L440 330 L0 330 Z" fill="#10283a" stroke="#36536a"></path>
+<path d="M25 291 L415 291" opacity=".7" stroke="#5d8198" stroke-dasharray="8 8" stroke-width="2"></path>
+<!-- Conveyor -->
+<g>
+<path d="M18 247 L420 247 L397 283 L38 283 Z" fill="url(#belt)" stroke="#b3c8d5" stroke-width="1.5"></path>
+<path d="M38 255 L400 255" stroke="#8aa4b6" stroke-width="2"></path>
+<path d="M47 267 L393 267" stroke="#253e50" stroke-dasharray="9 7" stroke-width="2"></path>
+<path d="M43 283 L43 300 M390 283 L390 300" stroke="#a7bdca" stroke-width="5"></path>
+<path d="M31 300 L58 300 M378 300 L405 300" stroke="#728c9f" stroke-linecap="round" stroke-width="5"></path>
+</g>
+<!-- Product moving on the conveyor -->
+<g>
+<rect fill="#e85e48" height="28" rx="3" stroke="#ffc2a9" stroke-width="1.5" width="38" x="285" y="225"></rect>
+<path d="M291 232 L317 232 M291 238 L317 238" opacity=".8" stroke="#ffb6a0" stroke-width="2"></path>
+<rect fill="#68c5e8" height="20" rx="2" stroke="#c3f0ff" stroke-width="1.5" width="27" x="335" y="232"></rect>
+</g>
+<!-- Robot pedestal -->
+<g>
+<path d="M130 260 L143 229 L210 229 L225 260 Z" fill="url(#robotSteel)" stroke="#d5e6ef" stroke-width="2"></path>
+<rect fill="#f0b52f" height="18" rx="4" stroke="#ffe49a" stroke-width="2" width="78" x="137" y="218"></rect>
+<path d="M146 223 L206 223" stroke="#8c5c12" stroke-width="3"></path>
+<ellipse cx="176" cy="218" fill="#f7cc57" rx="30" ry="10" stroke="#fff0b3" stroke-width="2"></ellipse>
+</g>
+<!-- First robotic link: shoulder pivots above pedestal -->
+<g class="robot-arm-1">
+<path class="robot-base" d="M164 208 L151 166 Q147 153 160 145 L178 138 Q191 134 198 147 L213 181 L194 195 L181 165 L176 211 Z"></path>
+<path class="robot-highlight" d="M160 151 L178 145 L194 180"></path>
+<circle class="robot-joint" cx="190" cy="155" r="20"></circle>
+<circle cx="190" cy="155" fill="#f1c40f" r="8" stroke="#fff1b3" stroke-width="2"></circle>
+<!-- Upper arm link, articulated at elbow -->
+<g class="robot-arm-2">
+<path class="robot-base" d="M181 151 L205 133 L265 144 Q279 148 278 162 L273 175 Q270 185 257 181 L202 171 L187 177 Z"></path>
+<path class="robot-highlight" d="M207 140 L260 151"></path>
+<circle class="robot-joint" cx="264" cy="159" r="18"></circle>
+<circle cx="264" cy="159" fill="#f1c40f" r="7" stroke="#fff1b3" stroke-width="2"></circle>
+<!-- Wrist link -->
+<g class="robot-wrist">
+<path d="M262 147 L291 151 L303 166 L292 181 L268 171 Z" fill="url(#robotSteel)" stroke="#e2eef5" stroke-width="2"></path>
+<circle class="robot-joint" cx="292" cy="166" r="11"></circle>
+<circle cx="292" cy="166" fill="#f1c40f" r="4"></circle>
+<!-- End effector / gripper -->
+<g class="robot-gripper">
+<path d="M286 174 L310 181 L315 195 L306 200 L299 188 L284 184 Z" fill="url(#robotSteel)" stroke="#dceaf2" stroke-width="2"></path>
+<path d="M307 195 L324 207 L319 213 L303 202 Z" fill="#dce7ef" stroke="#f8fbff" stroke-width="1.5"></path>
+<path d="M319 211 L329 216 L324 222 L314 216 Z" fill="#f1c40f" stroke="#fff1b3" stroke-width="1.5"></path>
+</g>
+</g>
+</g>
+</g>
+<!-- Safety light and status marks -->
+<g>
+<rect fill="#10293b" height="70" rx="5" stroke="#4e748d" stroke-width="2" width="48" x="35" y="96"></rect>
+<circle cx="59" cy="115" fill="#79edb0" r="6">
+<animate attributename="opacity" dur="1.5s" repeatcount="indefinite" values="1;.35;1"></animate>
+</circle>
+<circle cx="59" cy="132" fill="#f1c40f" opacity=".9" r="5"></circle>
+<circle cx="59" cy="148" fill="#e85e48" opacity=".9" r="5"></circle>
+<path d="M87 111 L123 111 L123 126" fill="none" stroke="#6b9bb9" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<text fill="#a9c9dc" font-size="9" letter-spacing="1.2" x="30" y="185">CONTROL</text>
+<text fill="#a9c9dc" font-size="9" letter-spacing="1.2" x="30" y="197">SYSTEM</text>
+</g>
+<!-- Small technical annotation -->
+<path d="M286 90 L326 68 L378 68" fill="none" opacity=".8" stroke="#79c9ef" stroke-dasharray="4 4" stroke-width="1.2"></path>
+<circle cx="286" cy="90" fill="#79c9ef" r="3"></circle>
+<text fill="#b9d9eb" font-size="9" letter-spacing="1" x="330" y="60">ARTICULATED ARM</text>
+</svg>
+<div class="robotics-hero-note"><span><span class="live-dot"></span>ENGINEERING • DESIGN • AUTOMATION</span><span>Lae, Papua New Guinea</span></div>
+</div>
+</div>
+</section>
+<div class="robotics-subnav-wrap"><nav aria-label="Robotics page sections" class="container robotics-subnav">
+<a href="#overview">Overview</a><a href="#laboratory">Laboratory</a><a href="#skills">Skills</a><a href="#team">Our Team</a><a href="#journey">Competition Journey</a><a href="#achievements">Achievements</a><a href="#impact">Impact</a><a href="#partnerships">Support</a><a href="#gallery">Gallery &amp; News</a><a href="#contact">Contact</a>
+</nav></div>
+<section class="robotics-section-block white" id="overview"><div class="container">
+<div class="section-title"><h2>01. Robotics at Lae Secondary School</h2><p>Practical STEM learning, creative thinking and international participation.</p></div>
+<p class="robotics-lead">Lae Secondary School in Morobe Province has participated in the FIRST Global robotics challenge since 2018, giving students opportunities to explore engineering, teamwork and technology while representing Papua New Guinea. The school’s robotics laboratory, officially opened in July 2025, is an important milestone in supporting the program.</p>
+<div class="robotics-stat-grid" style="background:linear-gradient(135deg,#0a3d62,#072c4a);padding:18px;border-radius:16px;">
+<div class="robotics-stat"><strong>2018</strong><span>First documented FIRST Global participation</span></div>
+<div class="robotics-stat"><strong>43rd</strong><span>2023 result among 191 countries/territories</span></div>
+<div class="robotics-stat"><strong>2025</strong><span>Dedicated robotics laboratory opened</span></div>
+<div class="robotics-stat"><strong>90th</strong><span>2025 result among 181 participating countries</span></div>
+</div>
+
+<div class="robotics-grid">
+<article class="robotics-card"><div class="robotics-icon">⚙️</div><h3>Engineering in practice</h3><p>Robotics introduces students to how mechanical structures, motors, control systems and programmed instructions work together to complete a task.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🧠</div><h3>Creative problem-solving</h3><p>Building and testing a robot encourages students to experiment, identify faults, refine designs and learn from trial and error.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🌏</div><h3>Global collaboration</h3><p>FIRST Global gives student teams a setting to meet peers from other countries, exchange ideas and collaborate through a shared engineering challenge.</p></article>
+</div>
+</div></section>
+<section class="robotics-section-block alt" id="objectives"><div class="container">
+<div class="section-title"><h2>02. Program Purpose and Objectives</h2><p>Why robotics matters to secondary education.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Strengthen STEM learning</h3><p>Connect science and mathematics to practical design, testing, measurement and technology.</p></article>
+<article class="robotics-card"><h3>Build technical confidence</h3><p>Give students experience with robot assembly, modification, programming concepts and technical troubleshooting.</p></article>
+<article class="robotics-card"><h3>Develop collaboration</h3><p>Help students share responsibilities, communicate clearly and coordinate their work toward a common goal.</p></article>
+<article class="robotics-card"><h3>Encourage innovation</h3><p>Support curiosity, creativity and the willingness to explore solutions beyond routine classroom exercises.</p></article>
+<article class="robotics-card"><h3>Broaden career awareness</h3><p>Expose learners to engineering, computer science, electronics, automation and related tertiary pathways.</p></article>
+<article class="robotics-card"><h3>Represent Papua New Guinea</h3><p>Provide a platform for students to showcase their work, learn from international teams and share their experience at home.</p></article>
+</div>
+<p style="font-size:.85rem;margin-top:20px;">These objectives describe the educational value and intended direction of robotics learning; they should not be read as a published formal school policy unless the school confirms them.</p>
+</div></section>
+<section class="robotics-section-block white" id="laboratory"><div class="container">
+<div class="section-title"><h2>03. Robotics Laboratory and Facilities</h2><p>A dedicated space to support student innovation.</p></div>
+<div class="robotics-grid two">
+<article class="robotics-card"><h3>Laboratory opened in July 2025</h3><p>Lae Secondary School officially opened a new robotics laboratory on 11 July 2025. The National Department of Education Secretary, Dr Uke Kombra, officiated at the opening. NBC PNG and <em>The National</em> reported that the facility cost nearly K1 million when transportation, storage and construction costs were included.</p><p>The building had been intended for a science laboratory; the materials were put to use supporting robotics and STEM learning at the school.</p><p><a href="https://www.nbc.com.pg/post/23390/lae-secondary-opens-a-new-robotic-laboratory" rel="noopener" target="_blank">Read NBC PNG’s report ↗</a></p></article>
+<article class="robotics-card"><h3>Why a dedicated space matters</h3><p>Reporting on the opening noted that the robotics club had not previously had a steady location for its projects. A dedicated laboratory can provide a more consistent environment for assembling, testing, storing and improving equipment.</p><p>Potential facility needs include robotics kits, computers, safe tool storage, reliable power, internet access and supervised work areas. Current equipment inventories have not been independently confirmed in the public sources reviewed.</p></article>
+</div>
+<div class="robotics-photo-placeholder" style="margin-top:22px;"><div><strong>Insert authorised school laboratory photographs</strong>Use actual images of the laboratory opening, equipment and students at work. Add dates, captions, alt text and photo permissions before publishing.</div></div>
+</div></section>
+<section class="robotics-section-block alt" id="skills"><div class="container">
+<div class="section-title"><h2>04. Robotics Education and Technical Skills</h2><p>Core areas students can explore through robotics projects.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><div class="robotics-icon">🔩</div><h3>Mechanical design</h3><p>Robot frames, wheels, gears, linkages, grippers, structural stability and movement.</p></article>
+<article class="robotics-card"><div class="robotics-icon">💻</div><h3>Programming and logic</h3><p>Instructions, sequencing, control logic, debugging and using code to direct robot actions.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🔌</div><h3>Electronics and sensors</h3><p>Motors, power systems, circuits, sensor inputs and the relationship between hardware and control.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🧪</div><h3>Testing and iteration</h3><p>Measuring performance, identifying failure points, changing a design and testing again.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🤝</div><h3>Teamwork and strategy</h3><p>Planning tasks, allocating roles, communicating clearly and coordinating actions with teammates.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🛡️</div><h3>Safe workshop practice</h3><p>Responsible equipment use, orderly workspaces, risk awareness and following teacher instructions.</p></article>
+</div>
+<p style="font-size:.85rem;margin-top:20px;">These are typical learning areas in robotics education. Public sources confirm student robot assembly and modifications, but do not provide a full official Lae Secondary School robotics syllabus.</p>
+</div></section>
+<section class="robotics-section-block white" id="team"><div class="container">
+<div class="section-title"><h2>05. Students, Teachers and Mentors</h2><p>The people behind the school’s robotics journey.</p></div>
+<div class="robotics-grid two">
+<article class="robotics-card"><h3>Student participation</h3><p>Teams have included Grade 11 students, with science-stream students reported among those selected for international events. Public coverage has described students learning through assembling robot kits, testing modifications, working together and presenting Papua New Guinea internationally.</p><p>The 2018 team included Stephanie Wakma and Emerald Pipingan, accompanied by teacher Martha Aaron. In 2025, <em>The National</em> reported that four students represented the school: Jastina Grochau, Delewai Pakop, Bonaventure Boaging and Carol Bopi.</p></article>
+<article class="robotics-card"><h3>Teachers and school leadership</h3><p>School principal Christopher Raymond has publicly supported the initiative and welcomed the laboratory investment. Reporting on the 2025 competition identified teachers Martha Aaron and Trevor Elia as accompanying the students. Earlier competition coverage also documents the involvement of teachers and school leadership in preparing and supporting teams.</p><p>Staff roles and current team membership should be confirmed by the school before this page is used as a current staff directory.</p></article>
+</div>
+<div class="notice-box"><strong>Privacy and safeguarding:</strong> Publish student names, ages, photographs and personal stories only with the school’s approval and the appropriate consent. Historical names above are included because they were published in news reporting; this does not replace permission for new photographs or profiles.</div>
+</div></section>
+<section class="robotics-section-block alt" id="journey"><div class="container">
+<div class="section-title"><h2>06. International Robotics Competition Journey</h2><p>Lae Secondary School’s documented participation in FIRST Global.</p></div>
+<div class="robotics-timeline">
+<div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-content"><h3>Mexico City, Mexico</h3><p>Lae Secondary School first participated in the international robotics challenge. Public reporting described students assembling a robot kit, learning through trial and error, making modifications and adapting a claw mechanism for competition tasks.</p><p><a href="https://www.thenational.com.pg/lae-students-take-on-the-world/" rel="noopener" target="_blank">Read The National’s 2018 report ↗</a></p></div></div>
+<div class="timeline-item"><div class="timeline-year">2019</div><div class="timeline-content"><h3>Dubai, United Arab Emirates</h3><p>The school returned to the international challenge in 2019, continuing its involvement in student robotics and STEM learning.</p></div></div>
+<div class="timeline-item"><div class="timeline-year">2020–21</div><div class="timeline-content"><h3>COVID-19 interruption</h3><p>News coverage reports that the school did not participate in the 2020 and 2021 events during the COVID-19 period.</p></div></div>
+<div class="timeline-item"><div class="timeline-year">2022</div><div class="timeline-content"><h3>Geneva, Switzerland</h3><p>Lae Secondary returned to the competition. Reporting described five Grade 11 science students, including four girls and one boy, preparing with a robotics kit before travelling.</p><p><a href="https://www.thenational.com.pg/lae-sec-to-compete-in-global-robotics-competition/" rel="noopener" target="_blank">Read The National’s 2022 report ↗</a></p></div></div>
+<div class="timeline-item"><div class="timeline-year">2023</div><div class="timeline-content"><h3>Singapore</h3><p>The team finished 43rd among 191 participating countries and territories, according to news reporting. EMTV reported that Papua New Guinea ranked among the leading Pacific island participants.</p><span class="result-badge">43rd of 191 · Reported result</span><p style="margin-top:10px;"><a href="https://www.thenational.com.pg/youths-represent-png-at-global-meet/" rel="noopener" target="_blank">Read The National’s 2023 report ↗</a></p></div></div>
+<div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-content"><h3>Athens, Greece</h3><p>Team Papua New Guinea’s official FIRST Global profile identified Lae Secondary School students and teacher mentors representing the country. The challenge theme was “Feeding the Future,” focused on food-related global challenges.</p><p><a href="https://first.global/2024-nations/papua-new-guinea-2024/" rel="noopener" target="_blank">View the official FIRST Global 2024 team profile ↗</a></p></div></div>
+<div class="timeline-item"><div class="timeline-year">2025</div><div class="timeline-content"><h3>Panama City, Panama</h3><p>The school again represented Papua New Guinea. The challenge theme was “Eco Equilibrium,” focused on environmental issues. Post-event reporting said the school team placed 90th out of 181 participating countries; four students were named in the report, accompanied by teachers Martha Aaron and Trevor Elia.</p><span class="result-badge">90th of 181 · Reported result</span><p style="margin-top:10px;"><a href="https://www.thenational.com.pg/lae-secondary-students-return-from-robotic-competition-in-panama-city/" rel="noopener" target="_blank">Read The National’s 2025 report ↗</a> · <a href="https://first.global/2025-nations/papua-new-guinea-2025/" rel="noopener" target="_blank">Official FIRST Global team profile ↗</a></p></div></div>
+</div>
+</div></section>
+<section class="robotics-section-block white" id="firstglobal"><div class="container">
+<div class="section-title"><h2>07. About the FIRST Global Challenge</h2><p>An international platform for student robotics and STEM collaboration.</p></div>
+<div class="robotics-grid two">
+<article class="robotics-card"><h3>How the challenge works</h3><p>FIRST Global is an international robotics challenge that brings teams of young people together around a game or challenge theme. Teams design, assemble, program and operate robots to complete defined tasks. Teamwork and collaboration across national teams are central features of the event.</p><p>In 2025, the Papua New Guinea team profile described the “Eco Equilibrium” theme as a call to address environmental issues and sustainable solutions.</p><p><a href="https://first.global/" rel="noopener" target="_blank">Visit FIRST Global ↗</a></p></article>
+<article class="robotics-card"><h3>What students gain</h3><p>Participation can expose students to practical engineering, structured problem-solving, teamwork across cultures and the experience of presenting their country on an international stage. In 2025, a teacher quoted by <em>The National</em> also highlighted the value of confidence, knowledge and experience that students can share with peers after returning home.</p><p>Competition formats and rules change by year; consult FIRST Global’s official resources for current details.</p></article>
+</div>
+</div></section>
+<section class="robotics-section-block dark" id="achievements"><div class="container">
+<div class="section-title"><h2>08. Achievements and Recognition</h2><p>Key public milestones in the school’s robotics story.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><div class="robotics-icon">🏆</div><h3>2023: Top 50 result</h3><p>The team placed 43rd among 191 participating countries and territories at the Singapore event, according to The National’s coverage.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🏫</div><h3>2025: Dedicated laboratory</h3><p>The opening of the school’s robotics laboratory was reported as an investment of nearly K1 million including transport, storage and construction costs.</p></article>
+<article class="robotics-card"><div class="robotics-icon">🌱</div><h3>2025: Eco Equilibrium</h3><p>The team competed in a challenge themed around environmental issues, linking robotics with questions of sustainability and the environment.</p></article>
+</div>
+<div class="notice-box" style="margin-top:24px;"><strong>Ranking note:</strong> The positions shown on this page are transcribed from the cited media reports. They are presented with their reported participation counts and should not be interpreted as rankings in a different scoring category.</div>
+</div></section>
+<section class="robotics-section-block alt" id="projects"><div class="container">
+<div class="section-title"><h2>09. Robotics Projects and Robot Development</h2><p>From assembly to testing and improvement.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Robot assembly</h3><p>Public reporting from the school’s early competition experience describes students assembling a supplied robot kit and following the instructions to understand how the parts fit together.</p></article>
+<article class="robotics-card"><h3>Design modifications</h3><p>Students have reported taking a robot apart, making adjustments and improving features such as the claw mechanism to suit competition tasks.</p></article>
+<article class="robotics-card"><h3>Testing and refinement</h3><p>Trial and error helps learners observe how a design behaves, locate problems and refine their approach. Future school project showcases could document the challenge, design process, testing and results.</p></article>
+</div>
+<div class="robotics-photo-placeholder" style="margin-top:22px;"><div><strong>Project showcase area</strong>Add verified project cards with robot name, year, student team, objective, components, what was tested and the outcome. Do not invent projects or technical specifications.</div></div>
+</div></section>
+<section class="robotics-section-block white" id="impact"><div class="container">
+<div class="section-title"><h2>10. Student Learning and Educational Impact</h2><p>How practical robotics can support future learning.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Critical thinking</h3><p>Students investigate a task, compare possible approaches and evaluate why a robot does or does not work as expected.</p></article>
+<article class="robotics-card"><h3>Confidence and communication</h3><p>Preparing for a competition and sharing experiences can help students explain technical ideas, work with others and build confidence.</p></article>
+<article class="robotics-card"><h3>Career pathways</h3><p>Robotics can help students explore future study in engineering, computer science, electrical and communications engineering, mechatronics and related fields.</p></article>
+</div>
+<p style="margin-top:20px;">The school’s competition experience has been linked in media reporting to students’ exposure to engineering pathways and the opportunity to share knowledge with peers. Further claims about measured learning outcomes should be supported by school records, evaluations or student testimony.</p>
+</div></section>
+<section class="robotics-section-block alt" id="png"><div class="container">
+<div class="section-title"><h2>11. Robotics for Papua New Guinea</h2><p>Connecting student innovation with local and national priorities.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Agriculture and food systems</h3><p>Potential student projects could explore simple sensing, irrigation monitoring, crop data collection or automated sorting as learning prototypes.</p></article>
+<article class="robotics-card"><h3>Environment and biodiversity</h3><p>Environmental monitoring, waste sorting and biodiversity awareness are possible themes for school projects, particularly relevant to the 2025 “Eco Equilibrium” challenge.</p></article>
+<article class="robotics-card"><h3>Industry and infrastructure</h3><p>Robotics education can introduce ideas used in manufacturing, logistics, inspection and automation, helping students understand modern industrial systems.</p></article>
+</div>
+<div class="notice-box"><strong>Opportunity, not an existing-project claim:</strong> These are examples of locally relevant robotics learning ideas. This page does not assert that Lae Secondary School has implemented these projects.</div>
+</div></section>
+<section class="robotics-section-block white" id="applications"><div class="container">
+<div class="section-title"><h2>12. Applications of Robotics and Automation</h2><p>Examples that can help students connect robotics concepts to real-world needs.</p></div>
+<div class="robotics-table-wrap"><table class="robotics-table"><thead><tr><th>Application area</th><th>Example learning idea</th><th>Skills explored</th></tr></thead><tbody>
+<tr><td>Agriculture</td><td>Model a sensor-assisted watering system</td><td>Sensors, measurement, control logic</td></tr>
+<tr><td>Environment</td><td>Build a prototype to sort sample waste items</td><td>Mechanical design, classification, testing</td></tr>
+<tr><td>Manufacturing</td><td>Simulate a conveyor and pick-and-place task</td><td>Automation, grippers, sequencing</td></tr>
+<tr><td>Disaster awareness</td><td>Model a remote vehicle for inspecting a safe mock environment</td><td>Remote control, design constraints, safety</td></tr>
+<tr><td>Community services</td><td>Design a prototype that moves or delivers lightweight objects</td><td>Planning, mobility, problem-solving</td></tr>
+</tbody></table></div>
+</div></section>
+<section class="robotics-section-block alt" id="challenges"><div class="container">
+<div class="section-title"><h2>13. Challenges and Development Needs</h2><p>Practical support can help more students participate.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Equipment and replacement parts</h3><p>News reporting has noted that robotics kits can be expensive. Kits, spare parts and maintenance supplies can affect students’ ability to practise consistently.</p></article>
+<article class="robotics-card"><h3>Training and mentorship</h3><p>Ongoing teacher development, volunteer mentoring and structured project time can help students develop skills between competitions.</p></article>
+<article class="robotics-card"><h3>Competition opportunities</h3><p>A teacher quoted by The National called for a national robotics competition so more schools could participate and prepare for international events.</p></article>
+</div>
+<p style="margin-top:18px;">Other possible priorities include computer access, connectivity, safe storage, travel funding and a sustainable equipment replacement plan. The school should confirm its current needs before any formal fundraising appeal is published.</p>
+</div></section>
+<section class="robotics-section-block white" id="partnerships"><div class="container">
+<div class="section-title"><h2>14. Partnerships, Sponsorship and Support</h2><p>Ways organisations and community members may be able to contribute.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><div class="robotics-icon">🧰</div><h3>Equipment support</h3><p>Robotics kits, motors, sensors, computers, tools and spare parts, subject to the school’s technical requirements.</p></article>
+<article class="robotics-card"><div class="robotics-icon">👩‍🏫</div><h3>Mentorship</h3><p>Technical demonstrations, supervised workshops, career talks and support from engineers, programmers and university students.</p></article>
+<article class="robotics-card"><div class="robotics-icon">✈️</div><h3>Competition assistance</h3><p>Potential support for registration, travel, accommodation, preparation and other approved participation costs.</p></article>
+</div>
+<div class="notice-box"><strong>Previously acknowledged support:</strong> The National’s November 2025 report named FIRST Global, the school board, Lae MP John Rosso, Wantok Auto Parts and BluePac Trading among those acknowledged for supporting the team’s participation. This reflects that report and is not a statement about current or ongoing sponsorship agreements.</div>
+<p>Organisations interested in supporting robotics should contact the school administration to confirm current priorities, approval processes, donation requirements and appropriate contact channels.</p>
+</div></section>
+<section class="robotics-section-block alt" id="roadmap"><div class="container">
+<div class="section-title"><h2>15. Future Vision and Strategic Roadmap</h2><p>A proposed framework for further development, subject to school approval.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><span class="robotics-eyebrow" style="color:#c0392b;">NEAR TERM</span><h3>Strengthen the foundation</h3><ul><li>Confirm laboratory equipment and maintenance needs.</li><li>Document the current robotics program and competition history.</li><li>Establish safe storage and equipment tracking.</li><li>Collect approved photographs and student stories.</li></ul></article>
+<article class="robotics-card"><span class="robotics-eyebrow" style="color:#c0392b;">MEDIUM TERM</span><h3>Expand learning opportunities</h3><ul><li>Explore regular supervised robotics workshops.</li><li>Invite mentors from relevant technical fields.</li><li>Share student learning with the school community.</li><li>Explore collaboration with universities and industry.</li></ul></article>
+<article class="robotics-card"><span class="robotics-eyebrow" style="color:#c0392b;">LONGER TERM</span><h3>Grow local robotics participation</h3><ul><li>Explore interschool robotics events if approved.</li><li>Develop locally relevant prototype challenges.</li><li>Build sustainable equipment and sponsorship plans.</li><li>Share proven practices with other schools.</li></ul></article>
+</div>
+<p style="font-size:.85rem;margin-top:18px;">This roadmap is a proposal for discussion. It is not an approved school development plan unless formally adopted by the school.</p>
+</div></section>
+<section class="robotics-section-block white" id="gallery"><div class="container">
+<div class="section-title"><h2>16. Robotics Gallery, Videos and News</h2><p>A visual record of learning, preparation and achievement.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><div class="robotics-photo-placeholder"><div><strong>Laboratory and equipment</strong>Add authorised photographs of the July 2025 laboratory opening and facility.</div></div><h3>Robotics laboratory</h3><p>Show the learning environment, equipment and supervised practical work.</p></article>
+<article class="robotics-card"><div class="robotics-photo-placeholder"><div><strong>Student projects</strong>Add images of assembly, testing and robot demonstrations.</div></div><h3>Building and testing</h3><p>Use captions to explain the task, process and what students learned.</p></article>
+<article class="robotics-card"><div class="robotics-photo-placeholder"><div><strong>International competitions</strong>Add school-approved team photos and event records.</div></div><h3>Global journey</h3><p>Organise photographs by year and link them to the relevant competition reports.</p></article>
+</div>
+<div class="robotics-card" style="margin-top:22px;"><h3>Published reporting and updates</h3><ul class="robotics-copy-list"><li><a href="https://www.thenational.com.pg/lae-students-take-on-the-world/" rel="noopener" target="_blank">2018 — Lae students take on the world</a></li><li><a href="https://www.thenational.com.pg/lae-sec-to-compete-in-global-robotics-competition/" rel="noopener" target="_blank">2022 — Lae Sec to compete in global robotics competition</a></li><li><a href="https://www.thenational.com.pg/youths-represent-png-at-global-meet/" rel="noopener" target="_blank">2023 — Youths represent PNG at global meet</a></li><li><a href="https://www.nbc.com.pg/post/23390/lae-secondary-opens-a-new-robotic-laboratory" rel="noopener" target="_blank">2025 — Lae Secondary opens a new robotic laboratory</a></li><li><a href="https://www.thenational.com.pg/lae-secondary-students-return-from-robotic-competition-in-panama-city/" rel="noopener" target="_blank">2025 — Lae Secondary students return from Panama City competition</a></li></ul></div>
+</div></section>
+<section class="robotics-section-block alt" id="stories"><div class="container">
+<div class="section-title"><h2>17. Student Stories and Testimonials</h2><p>Personal experiences can show the impact of robotics more clearly than statistics alone.</p></div>
+<div class="robotics-grid two">
+<article class="robotics-card"><h3>Learning through trial and error</h3><p>A 2018 report quoted student Stephanie Wakma describing how students assembled a mini-robot, took it apart, tested it and modified the claw mechanism. Her account illustrates the hands-on nature of the learning process.</p><p><a href="https://www.thenational.com.pg/lae-students-take-on-the-world/" rel="noopener" target="_blank">Read the original report ↗</a></p></article>
+<article class="robotics-card"><h3>Confidence and knowledge-sharing</h3><p>In 2025, teacher Martha Aaron told The National that the competition could boost students’ confidence and knowledge and give them experience to share with peers. New testimonials should be collected with consent and approved by the school.</p><p><a href="https://www.thenational.com.pg/lae-secondary-students-return-from-robotic-competition-in-panama-city/" rel="noopener" target="_blank">Read the original report ↗</a></p></article>
+</div>
+</div></section>
+<section class="robotics-section-block white" id="faqs"><div class="container robotics-faq">
+<div class="section-title"><h2>18. Frequently Asked Questions</h2><p>Quick answers about the robotics page and program.</p></div>
+<details><summary>When did Lae Secondary School begin international robotics participation?</summary><p>Public reporting identifies 2018 as the school’s first participation in the FIRST Global Challenge.</p></details>
+<details><summary>When was the robotics laboratory opened?</summary><p>The new robotics laboratory was officially opened in July 2025, with Dr Uke Kombra, Secretary of the National Department of Education, officiating.</p></details>
+<details><summary>What was the school's result in 2023?</summary><p>Media reports stated that the team placed 43rd among 191 participating countries and territories in Singapore.</p></details>
+<details><summary>What was the school's result in 2025?</summary><p>The National reported that the team placed 90th out of 181 participating countries at the Panama City event.</p></details>
+<details><summary>Can students or organisations join or support the program?</summary><p>Enquiries should be directed to the school administration. Participation arrangements, current team selection, donations and sponsorship opportunities must be confirmed by the school.</p></details>
+<details><summary>Does the school offer a full robotics syllabus?</summary><p>Public reports describe robotics classes and the club’s competition work, but the sources reviewed do not provide a complete official syllabus. Contact the school for current curriculum and participation details.</p></details>
+</div></section>
+<section class="robotics-section-block alt" id="involved"><div class="container">
+<div class="section-title"><h2>19. Get Involved</h2><p>Help create more opportunities for students to explore technology.</p></div>
+<div class="robotics-grid">
+<article class="robotics-card"><h3>Students and families</h3><p>Contact the school to ask about current robotics activities, eligibility, schedules and participation arrangements.</p></article>
+<article class="robotics-card"><h3>Technical professionals</h3><p>Engineers, programmers, researchers and university students may enquire about offering talks, demonstrations or approved mentoring.</p></article>
+<article class="robotics-card"><h3>Businesses and supporters</h3><p>Organisations can ask the school about its current needs, donation processes, sponsorship options and partnership approval requirements.</p></article>
+</div>
+</div></section>
+<section class="robotics-section-block white" id="contact"><div class="container">
+<div class="section-title"><h2>20. Contact and Enquiries</h2><p>For current program details, official school guidance and partnership enquiries.</p></div>
+<div class="robotics-grid two">
+<article class="robotics-card"><h3>Lae Secondary School Administration</h3><p><strong>Location:</strong> Lae District, Morobe Province, Papua New Guinea</p><p><strong>Postal address:</strong> PO Box 792, Lae 411</p><p><strong>Administration:</strong> <a href="tel:+67578289085">+675 7828 9085</a></p><p><strong>Email:</strong> <a href="mailto:administration@laesecondary.edu.pg">administration@laesecondary.edu.pg</a></p><p><strong>General enquiries:</strong> <a href="mailto:info.reception@laesecondary.edu.pg">info.reception@laesecondary.edu.pg</a></p></article>
+<article class="robotics-card"><h3>Useful official and published resources</h3><ul class="robotics-copy-list"><li><a href="https://first.global/" rel="noopener" target="_blank">FIRST Global official website</a></li><li><a href="https://first.global/2025-nations/papua-new-guinea-2025/" rel="noopener" target="_blank">Papua New Guinea team profile — 2025</a></li><li><a href="https://first.global/2024-nations/papua-new-guinea-2024/" rel="noopener" target="_blank">Papua New Guinea team profile — 2024</a></li><li><a href="index.html">Return to the school homepage</a></li><li><a href="about.html">About Lae Secondary School</a></li></ul></article>
+</div>
+</div></section>
+<section class="robotics-section-block dark" id="sources"><div class="container">
+<div class="section-title"><h2>21. Sources and Editorial Notes</h2><p>Public references used to prepare this page.</p></div>
+<ul class="source-list">
+<li><a href="https://www.thenational.com.pg/lae-students-take-on-the-world/" rel="noopener" target="_blank">The National — “Lae students take on the world” (13 August 2018)</a><small>Documents the school’s early international participation, student robot assembly and modifications.</small></li>
+<li><a href="https://www.thenational.com.pg/lae-sec-to-compete-in-global-robotics-competition/" rel="noopener" target="_blank">The National — “Lae Sec to compete in global robotics competition” (6 October 2022)</a><small>Describes the 2022 team and the school’s previous participation.</small></li>
+<li><a href="https://www.thenational.com.pg/youths-represent-png-at-global-meet/" rel="noopener" target="_blank">The National — “Youths represent PNG at global meet” (16 October 2023)</a><small>Reports the team’s 43rd-place result in Singapore.</small></li>
+<li><a href="https://first.global/2024-nations/papua-new-guinea-2024/" rel="noopener" target="_blank">FIRST Global — Team Papua New Guinea 2024</a><small>Official team profile for the 2024 competition in Athens.</small></li>
+<li><a href="https://www.nbc.com.pg/post/23390/lae-secondary-opens-a-new-robotic-laboratory" rel="noopener" target="_blank">NBC PNG — “Lae Secondary opens a new robotic laboratory” (12 July 2025)</a><small>Reports the laboratory opening and its support from the National Department of Education.</small></li>
+<li><a href="https://www.thenational.com.pg/lae-secondary-opens-new-robotics-lab/" rel="noopener" target="_blank">The National — “Lae secondary opens new robotics lab” (14 July 2025)</a><small>Provides context about the laboratory, STEM and the school’s competition history.</small></li>
+<li><a href="https://first.global/2025-nations/papua-new-guinea-2025/" rel="noopener" target="_blank">FIRST Global — Team Papua New Guinea 2025</a><small>Official team profile describing the “Eco Equilibrium” theme and preparation for Panama City.</small></li>
+<li><a href="https://www.thenational.com.pg/lae-secondary-students-return-from-robotic-competition-in-panama-city/" rel="noopener" target="_blank">The National — “Lae Secondary students return from robotic competition in Panama City” (7 November 2025)</a><small>Reports the team’s 2025 result, student participants, teachers and support acknowledged.</small></li>
+</ul>
+<p style="font-size:.84rem;margin-top:18px;">Editorial note: This page summarises publicly available reports and team profiles. Proposed learning ideas, development priorities and future plans are clearly framed as opportunities, not confirmed school commitments. School administration should review the content, current contact details and photo permissions before publication.</p>
+</div></section>
+<section class="robotics-cta" id="get-involved"><div class="container robotics-cta-inner"><div><h2>Building the next generation of STEM innovators</h2><p>Lae Secondary School’s robotics journey demonstrates how practical learning and international collaboration can open new horizons for young Papua New Guineans. Contact the school for verified information about current activities, support needs and participation.</p></div><a class="btn" href="mailto:administration@laesecondary.edu.pg?subject=Robotics%20Program%20Enquiry">Make an Enquiry</a></div></section>
+<button aria-label="Back to top" class="back-top" id="backTop" title="Back to top" type="button">↑</button>
+
+<!-- HERO SECTION -->
+
+<!-- FEATURE CARDS -->
+
+<!-- STEM & ROBOTICS SHOWCASE -->
+
+<!-- NEWS & ANNOUNCEMENTS SECTION -->
+
+<!-- PRINCIPAL MESSAGE TEASER -->
+
+<!-- CALL TO ACTION -->
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<h3>Lae Secondary School</h3>
+<p>
+                        A secondary school committed to academic excellence, 
+                        character development and service to the people of Papua New Guinea.
+                    </p>
+<p style="margin-top:15px;">
+<strong>Motto:</strong> Learning • Leadership • Service
+                    </p>
+</div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="about.html">About the School</a></li>
+<li><a href="academics.html">Academics</a></li>
+<li><a href="admissions.html">Admissions</a></li>
+<li><a href="students.html">Student Life</a></li>
+<li><a href="news.html">News &amp; Events</a></li>
+<li><a href="school-fee-purpose.html">Where do school fees go?</a></li>
+<li><a href="downloads.html">Downloads</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Resources</h3>
+<ul>
+<li><a href="academic-calendar.html">Academic Calendar</a></li>
+<li><a href="fees.html">Fees &amp; Charges</a></li>
+<li><a href="policies.html">School Policies</a></li>
+<li><a href="gallery.html">Photo Gallery</a></li>
+<li><a href="parents.html">Parents &amp; Guardians</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Contact Information</h3>
+<p>📍 Lae Secondary School<br/>
+                       PO Box 792, Lae 411<br/>
+                       Lae District, Morobe Province, Papua New Guinea</p>
+<p>📞 Administration: +675 7828 9085</p>
+<p>✉️ <a href="mailto:administration@laesecondary.edu.pg">administration@laesecondary.edu.pg</a></p>
+<p>Principal: +675 81302423</p>
+<p>✉️ <a href="mailto:csraymond.principal@laesecondary.edu.pg">csraymond.principal@laesecondary.edu.pg</a></p>
+<p>General enquiries: <a href="mailto:info.reception@laesecondary.edu.pg">info.reception@laesecondary.edu.pg</a></p>
+<p style="margin-top:12px; font-size:0.85rem;">
+                        Office Hours: Monday – Friday<br/>
+                        8:00 am – 4:00 pm
+                    </p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>
+                    © 2026 Lae Secondary School. All rights reserved.  | 
+                    <a href="policies.html">Privacy Policy</a>  | 
+                    <a href="contact.html">Contact</a>
+</p>
+<p style="margin-top:8px; font-size:0.85rem;">
+                    School information portal • Serving students, parents and the Lae community
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Simple dropdown support for mobile
+        document.querySelectorAll('.main-nav > ul > li').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && this.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    this.classList.toggle('open');
+                }
+            });
+        });
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    
+
+        // Back-to-top control for the long robotics page
+        (function () {
+            const backTop = document.getElementById('backTop');
+            if (!backTop) return;
+            window.addEventListener('scroll', function () {
+                backTop.classList.toggle('visible', window.scrollY > 500);
+            }, { passive: true });
+            backTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+</script>
+</body>
+</html>

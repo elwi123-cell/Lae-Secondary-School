@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="Secure page management dashboard for Lae Secondary School"><title>Principal Dashboard | Lae Secondary School</title><style>
+:root{--navy:#0a3d62;--navy2:#072c4a;--red:#c0392b;--gold:#f1c40f;--bg:#f3f6fa;--ink:#1d2939;--muted:#667085;--line:#dce3eb;--white:#fff;--green:#16805d;--shadow:0 12px 32px rgba(10,35,65,.09)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Arial,Helvetica,sans-serif}a{color:var(--navy)}button,select,input{font:inherit}button,.btn{border:0;border-radius:9px;padding:11px 16px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}button:hover,.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}button:disabled{opacity:.55;cursor:not-allowed;transform:none}.secondary{background:#eaf0f6;color:var(--navy);border:1px solid #d4dfeb}.gold{background:var(--gold);color:#242424}.outline{background:#fff;color:var(--navy);border:1px solid var(--line)}.topline{height:6px;background:linear-gradient(90deg,var(--red) 0 33%,var(--gold) 33% 66%,var(--navy) 66%)}header{background:var(--navy2);color:#fff;box-shadow:var(--shadow)}.head{max-width:1440px;margin:auto;padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{display:flex;gap:14px;align-items:center}.crest{width:52px;height:52px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:900;color:var(--gold);letter-spacing:-1px}.brand h1{font-size:1.08rem;margin:0}.brand p{margin:3px 0 0;color:#cdd9e6;font-size:.82rem}.head-actions{display:flex;gap:9px;flex-wrap:wrap}main{max-width:1440px;margin:0 auto;padding:30px 28px 54px}.welcome{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--red);font-weight:800;font-size:.75rem}.welcome h2{font-size:clamp(1.7rem,3vw,2.45rem);line-height:1.15;color:var(--navy);margin:6px 0}.welcome p{margin:0;color:var(--muted);max-width:760px}.status-pill{background:#e7f6ef;color:#126747;border-radius:100px;padding:8px 12px;font-weight:700;font-size:.82rem;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 4px 15px rgba(10,35,65,.03)}.stat span{display:block;color:var(--muted);font-size:.86rem}.stat strong{display:block;font-size:1.5rem;color:var(--navy);margin-top:3px}.grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr);gap:20px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.panel-head h3{margin:0;color:var(--navy);font-size:1.1rem}.panel-body{padding:22px}.steps{display:grid;gap:14px}.step{display:grid;grid-template-columns:36px 1fr;gap:12px}.num{height:34px;width:34px;border-radius:10px;background:#eaf0f6;color:var(--navy);font-weight:800;display:grid;place-items:center}.step h4{margin:0 0 4px;font-size:.98rem}.step p{margin:0;color:var(--muted);font-size:.9rem}.field{margin:0 0 17px}.field label{display:block;font-weight:750;color:#25364b;margin-bottom:7px}.field select,.field input,.field textarea{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--ink);outline:none}.field select:focus,.field input:focus{border-color:#337ab7;box-shadow:0 0 0 3px #337ab71a}.helper{color:var(--muted);font-size:.83rem;margin:7px 0 0}.selected-card{display:none;margin-top:16px;padding:16px;border:1px solid #d8e4ef;background:#f7fbff;border-radius:12px}.selected-card.show{display:block}.selected-card h4{margin:0 0 4px;color:var(--navy);overflow-wrap:anywhere}.selected-card p{color:var(--muted);font-size:.86rem;margin:0 0 12px}.linkout{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}.notice{margin:20px 0 0;padding:14px 16px;border-radius:10px;background:#fff8df;border:1px solid #f1d978;color:#594700;font-size:.88rem}.notice strong{color:#3c3100}.msg{display:none;padding:12px 14px;border-radius:9px;margin:14px 0;font-size:.9rem}.msg.show{display:block}.msg.error{background:#fff0ef;color:#922b21;border:1px solid #f2c6c2}.msg.success{background:#eaf8f0;color:#126747;border:1px solid #bde6ce}.bottom{margin-top:22px;color:var(--muted);font-size:.82rem;text-align:center}footer{background:#fff;border-top:1px solid var(--line);padding:18px 28px;text-align:center;color:var(--muted);font-size:.82rem}@media(max-width:900px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.welcome{align-items:start;flex-direction:column}}@media(max-width:600px){.head{padding:15px;align-items:flex-start}.head-actions{flex-direction:column}.head-actions>*{width:100%}main{padding:22px 14px 36px}.brand h1{font-size:.95rem}.crest{width:44px;height:44px;flex-shrink:0}.stats{grid-template-columns:1fr}.panel-body{padding:17px}.panel-head{padding:17px}.welcome h2{font-size:1.8rem}}
+</style></head><body><div class="topline"></div><header><div class="head"><div class="brand"><div class="crest" aria-hidden="true">LSS</div><div><h1>Lae Secondary School</h1><p>Principal's Website Management Centre</p></div></div><div class="head-actions"><a class="btn secondary" href="./index.html">↗ View public website</a><button id="logout-button" class="outline" type="button">Sign out</button></div></div></header><main><section class="welcome"><div><div class="eyebrow">Secure administration</div><h2>Principal Dashboard</h2><p>Choose a website page, open its visual editing workspace, review changes, and prepare a clean preview before publishing.</p></div><span class="status-pill" id="auth-status">Checking access…</span></section><div class="stats"><div class="stat"><span>HTML pages detected in supplied site package</span><strong id="page-count">—</strong></div><div class="stat"><span>Editing workflow</span><strong>Section-based</strong></div><div class="stat"><span>Publishing safety</span><strong>Preview first</strong></div></div><div class="grid"><section class="panel"><div class="panel-head"><h3>Open a page for editing</h3><span aria-hidden="true">✎</span></div><div class="panel-body"><div class="field"><label for="page-slug">Page Filename / Slug</label><select id="page-slug" required><option value="">Select an HTML page…</option><option value="index.html">index.html — Home page</option>
+<option value="404.html">404.html — 404</option>
+<option value="about (1).html">about (1).html — About (duplicate file)</option>
+<option value="about.html">about.html — About</option>
+<option value="academic-calendar (1).html">academic-calendar (1).html — Academic calendar (duplicate file)</option>
+<option value="academic-calendar-1.html">academic-calendar-1.html — Academic calendar (alternate file)</option>
+<option value="academic-calendar.html">academic-calendar.html — Academic Calendar</option>
+<option value="academics (1).html">academics (1).html — Academics (1)</option>
+<option value="academics.html">academics.html — Academics</option>
+<option value="accessibility.html">accessibility.html — Accessibility</option>
+<option value="achievements (1).html">achievements (1).html — Achievements (1)</option>
+<option value="achievements.html">achievements.html — Achievements</option>
+<option value="admissions (1).html">admissions (1).html — Admissions (1)</option>
+<option value="admissions.html">admissions.html — Admissions</option>
+<option value="alumni.html">alumni.html — Alumni</option>
+<option value="application (1).html">application (1).html — Application (1)</option>
+<option value="application-status.html">application-status.html — Application Status</option>
+<option value="application.html">application.html — Application</option>
+<option value="boarding (1).html">boarding (1).html — Boarding (1)</option>
+<option value="boarding.html">boarding.html — Boarding</option>
+<option value="careers.html">careers.html — Careers</option>
+<option value="community.html">community.html — Community</option>
+<option value="contact (1).html">contact (1).html — Contact (1)</option>
+<option value="contact.html">contact.html — Contact</option>
+<option value="dashboard.html">dashboard.html — Principal dashboard</option>
+<option value="departments (1).html">departments (1).html — Departments (1)</option>
+<option value="departments.html">departments.html — Departments</option>
+<option value="downloads (1).html">downloads (1).html — Downloads (1)</option>
+<option value="downloads.html">downloads.html — Downloads</option>
+<option value="emergency-information.html">emergency-information.html — Emergency Information</option>
+<option value="events (1).html">events (1).html — Events (1)</option>
+<option value="events.html">events.html — Events</option>
+<option value="examinations.html">examinations.html — Examinations</option>
+<option value="facilities (1).html">facilities (1).html — Facilities (1)</option>
+<option value="facilities.html">facilities.html — Facilities</option>
+<option value="faq.html">faq.html — Faq</option>
+<option value="feedback.html">feedback.html — Feedback</option>
+<option value="fees (1).html">fees (1).html — Fees (1)</option>
+<option value="fees.html">fees.html — Fees</option>
+<option value="gallery.html">gallery.html — Gallery</option>
+<option value="laesecondary-robotics.html">laesecondary-robotics.html — Lae Secondary Robotics</option>
+<option value="leadership (1).html">leadership (1).html — Leadership (1)</option>
+<option value="leadership.html">leadership.html — Leadership</option>
+<option value="learning.html">learning.html — Learning</option>
+<option value="library.html">library.html — Library</option>
+<option value="login.html">login.html — Principal login</option>
+<option value="news.html">news.html — News</option>
+<option value="parents.html">parents.html — Parents</option>
+<option value="partnerships.html">partnerships.html — Partnerships</option>
+<option value="policies.html">policies.html — Policies</option>
+<option value="principal-message.html">principal-message.html — Principal Message</option>
+<option value="privacy-policy.html">privacy-policy.html — Privacy Policy</option>
+<option value="profile.html">profile.html — Profile</option>
+<option value="results.html">results.html — Results</option>
+<option value="safeguarding.html">safeguarding.html — Safeguarding</option>
+<option value="school-fee-purpose.html">school-fee-purpose.html — School Fee Purpose</option>
+<option value="school-governance.html">school-governance.html — School Governance</option>
+<option value="school-history.html">school-history.html — School History</option>
+<option value="sitemap.html">sitemap.html — Sitemap</option>
+<option value="sports.html">sports.html — Sports</option>
+<option value="staff.html">staff.html — Staff</option>
+<option value="student-attendance.html">student-attendance.html — Student Attendance</option>
+<option value="student-code-of-conduct.html">student-code-of-conduct.html — Student Code Of Conduct</option>
+<option value="student-leadership.html">student-leadership.html — Student Leadership</option>
+<option value="student-welfare.html">student-welfare.html — Student Welfare</option>
+<option value="students.html">students.html — Students</option>
+<option value="support-the-school.html">support-the-school.html — Support The School</option>
+<option value="teaching-and-learning.html">teaching-and-learning.html — Teaching And Learning</option>
+<option value="terms-of-use.html">terms-of-use.html — Terms Of Use</option>
+<option value="timetable.html">timetable.html — Timetable</option>
+<option value="vision-mission.html">vision-mission.html — Vision Mission</option>
+<option value="volunteer.html">volunteer.html — Volunteer</option></select><p class="helper">The filename is kept exactly as it appears in the supplied ZIP archive. Duplicate filenames are shown separately.</p></div><div id="selected-card" class="selected-card" aria-live="polite"><h4 id="selected-title"></h4><p id="selected-description"></p><a class="linkout" id="edit-link" href="./page-editor.html">Open editable version →</a></div><div id="message" class="msg" role="status" aria-live="polite"></div><div class="notice"><strong>Before you publish:</strong> review text, images, video sizing, links, and mobile layout. The editor creates a local draft; publishing changes to the live website requires a connected deployment/CMS backend and appropriate permissions.</div></div></section><section class="panel"><div class="panel-head"><h3>Editing process</h3><span aria-hidden="true">✓</span></div><div class="panel-body"><div class="steps"><div class="step"><div class="num">1</div><div><h4>Select a page</h4><p>Choose the exact HTML filename from the dropdown. Its editable-version link will appear below.</p></div></div><div class="step"><div class="num">2</div><div><h4>Edit individual sections</h4><p>Open the editor, select a section on the page, and make changes while keeping the original layout as a guide.</p></div></div><div class="step"><div class="num">3</div><div><h4>Retain Professionalism</h4><p>Run the available quality checks for grammar, image dimensions, video sizing, and layout consistency.</p></div></div><div class="step"><div class="num">4</div><div><h4>Preview &amp; Publish</h4><p>Review the proposed page, then publish through the authorized deployment workflow or return to editing.</p></div></div></div></div></section></div><p class="bottom">Learning • Leadership • Service · Lae Secondary School, Lae, Morobe Province, Papua New Guinea</p></main><footer>Principal Website Management Centre · Protect your login credentials and sign out when finished.</footer><script type="module">
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./supabase-config.js";
+const supabase=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);const $=s=>document.querySelector(s);const pages=Array.from($('#page-slug').options).filter(o=>o.value);$('#page-count').textContent=pages.length;
+function showMessage(text,type='error'){const m=$('#message');m.textContent=text;m.className='msg show '+type}
+$('#page-slug').addEventListener('change',()=>{const f=$('#page-slug').value,card=$('#selected-card'),link=$('#edit-link');if(!f){card.classList.remove('show');return}link.href='./page-editor.html?page='+encodeURIComponent(f);$('#selected-title').textContent=f;$('#selected-description').textContent='Editable workspace for '+f+'. Your selected page will open in a visual editing view.';card.classList.add('show')});
+async function verifyPrincipal(){try{const {data:{user},error}=await supabase.auth.getUser();if(error||!user){location.replace('./login.html');return}const {data:admin,error:roleError}=await supabase.from('cms_admins').select('user_id,role').eq('user_id',user.id).eq('role','principal').maybeSingle();if(roleError||!admin){await supabase.auth.signOut();location.replace('./login.html');return}$('#auth-status').textContent='Signed in · Principal';}catch(e){$('#auth-status').textContent='Access check unavailable';showMessage('Unable to verify principal access. Check the Supabase configuration and connection. '+(e?.message||''))}}
+$('#logout-button').addEventListener('click',async()=>{await supabase.auth.signOut();location.replace('./login.html')});verifyPrincipal();
+</script></body></html>
